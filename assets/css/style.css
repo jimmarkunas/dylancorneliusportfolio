@@ -1349,30 +1349,7 @@ p {
     position: relative;
     overflow: hidden;
     background: #222;
-    z-index: -1;
-}
-.serv-1 {
-    width: 153px;
-    height: 153px;
-    position: absolute;
-    left: 792px;
-    top: 33%;
-    z-index: 101;
-   animation: shape1animtion 14s linear infinite;
-}
-
-@keyframes shape1animtion{
-0% {
-  transform: translate(0) rotate(0deg);
-}
-
-50% {
-  transform: translate(-40px,100px);
-}
-
-100% {
-  transform: translate(0) rotate(0deg);
-}
+    z-index: 0;
 }
 .elem-left{
     animation: anim-left 5s infinite;
@@ -1409,20 +1386,19 @@ p {
     z-index: 100;
 }
 .service-background .dark {
-    height: 675px;
+    height: 700px;
     width: 72%;
     background: #191919;
     position: absolute;
     right: 0;
     float: right;
-    position: relative;
-    margin-top: 80px;
-    z-index: -100;
+    margin-top: 0;
+    z-index: 99;
 }
 .service-background .dark::after {
     border-color: #222 transparent transparent;
     border-style: solid;
-    border-width: 675px 193px 0px 0px;
+    border-width: 700px 193px 0px 0px;
     content: "";
     left: 0;
     position: absolute;
