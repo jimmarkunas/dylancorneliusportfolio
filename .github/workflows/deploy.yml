@@ -23,8 +23,7 @@ jobs:
       - name: Validate static entrypoint exists
         run: |
           test -f index.html
-          test -d styles
-          test -d scripts
+          test -d assets
 
       - name: Publish static files to hostinger-static branch
         run: |
@@ -46,17 +45,13 @@ jobs:
 
           find "${TMP_DIR}" -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
 
-          cp "${GITHUB_WORKSPACE}/index.html" "${TMP_DIR}/"
-          cp -R "${GITHUB_WORKSPACE}/styles" "${TMP_DIR}/"
-          cp -R "${GITHUB_WORKSPACE}/scripts" "${TMP_DIR}/"
-
-          if [[ -d "${GITHUB_WORKSPACE}/assets" ]]; then
-            cp -R "${GITHUB_WORKSPACE}/assets" "${TMP_DIR}/"
-          fi
-
-          if [[ -f "${GITHUB_WORKSPACE}/CNAME" ]]; then
-            cp "${GITHUB_WORKSPACE}/CNAME" "${TMP_DIR}/"
-          fi
+          rsync -a \
+            --exclude ".git/" \
+            --exclude ".github/" \
+            --exclude ".DS_Store" \
+            --exclude "README.md" \
+            --exclude "LICENSE" \
+            "${GITHUB_WORKSPACE}/" "${TMP_DIR}/"
 
           cd "${TMP_DIR}"
           git add -A

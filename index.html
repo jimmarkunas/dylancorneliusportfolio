@@ -1,22 +1,1262 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Static Site</title>
-    <link rel="stylesheet" href="styles/main.css" />
-  </head>
-  <body>
-    <main class="site-shell">
-      <h1>Vanilla Static Website</h1>
-      <p>
-        This project uses plain HTML, CSS, and JavaScript with static deployment
-        through GitHub Actions.
-      </p>
-      <button id="status-button" type="button">Check Status</button>
-      <p id="status-text" class="status-text" aria-live="polite"></p>
-    </main>
+<!DOCTYPE html>
+<html lang="zxx">
 
-    <script src="scripts/main.js"></script>
-  </body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Johnson – Personal Portfolio Template </title>
+    <!--favicon-->
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+    <!--bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!--owl carousel css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.default.min.css">
+    <!--magnific popup css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <!--font awesome css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome.all.min.css">
+    <!--meanmenu css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/meanmenu.css">
+    <!--animate css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- jquery-ui.min -->
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
+    <!--main css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!--star preloader-->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell align-middle">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end preloader-->
+    <div class="sidebar-wrap">
+        <div class="sidebar-inner">
+            <div class="sidebar-close">
+                <div class="sidebar-close-btn">
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <div class="sidebar-logo">
+                    <a href="index.html">
+                        <img class="img-fluid" src="assets/images/logo.png" alt="logo.png">
+                    </a>
+                </div>
+                <div class="mobile-menu"></div>
+                <div class="search-form">
+                    <input type="text" placeholder="Search Courses" class="form-control">
+                    <span><i class="fa fa-search"></i></span>
+                </div>
+                <div class="contact-info">
+                    <ul>
+                        <li><i class="fa fa-envelope"></i> example@gmail.com</li>
+                        <li><i class="fas fa-phone-alt"></i> +98 012345 6789</li>
+                    </ul>
+                </div>
+                <div class="social-icon">
+                    <ul>
+                        <li><span>Follow Us:</span></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- start header-top-area -->
+    <header class="header-area">
+        <!--start header-btm-area-->
+        <div class="header-btm-area">
+            <div class="container">
+                <div class="main-menu-wrap">
+                    <!--start site logo-->
+                    <div class="site-logo">
+                        <a class="logo" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+                    </div>
+                    <!--end site logo-->
+                    <!--start mainmenu-->
+                    <div class="main-menu-area text-right">
+                        <nav class="mainmenu">
+                            <ul id="nav_header">
+                                <li><a onClick="menuclick12()" href="#home" >Home</a></li>
+                                <li><a onClick="menuclick12()" href="#about">About</a></li>
+                                <li><a onClick="menuclick12()" href="#services">Service</a></li>
+                                <li><a onClick="menuclick12()" href="#testimonial">Testimonial</a></li>
+                                <li><a onClick="menuclick12()" href="#pricing">Pricing</a></li>
+                                <li><a onClick="menuclick12()" href="#portfolio">Portfolio</a></li>
+                                <li><a onClick="menuclick12()" href="#blog">Blog</a></li>
+                                <li><a onClick="menuclick12()" href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--end mainmenu-->
+                    <!--start login registration btn-->
+                    <div class="header-log-reg text-right">
+                        <ul>
+                            <li><a href="#">Hire Me</a></li>
+                        </ul>
+                    </div>
+                    <!--end login registration btn-->
+                    <!--start toggle button-->
+                    <div class="header-toggle-btn">
+                        <a class="sidebar-toggle-btn">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                    <!--end toggle button-->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--end header-->
+    <!-- hero-area start -->
+    <section id="home" class="hero-banner">
+        <div class="shape">
+           <img src="assets/images/banner/shape.png" alt="men">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-xl-6 col-md-12 order-2 order-lg-1 align-self-center">
+                    <div class="hero-content">
+                        <h2>I Am  Johnson,<span> Professional Developer</span></h2>
+                        <div class="serarch_input">
+                              <form action="#">
+                                <input type="email" placeholder="Find Your lorem ipsum">
+                                <button class="subscribe-btn"><i class="fas fa-arrow-right"></i></button>
+                            </form>
+                         </div>
+                         <div class="hero-counter">
+                             <div class="counter-single text-center">
+                                <h2><span class="counter">07</span>+</h2>
+                                <p>Year Experience</p>
+                            </div>
+                            <div class="counter-single text-center">
+                                <h2><span class="counter">200</span>+</h2>
+                                <p>Project Complate</p>
+                            </div>
+                            <div class="counter-single text-center">
+                                <h2><span class="counter">100</span>+</h2>
+                                <p>Development Award.</p>
+                            </div>
+                         </div>
+                         <div class="hero-buttons">
+                            <div class="navigation">
+                                <div class="menuToggle"></div>
+                                <div class="menu_banner">
+                                    <ul>
+                                        <li style="--i:0.1s"><a href="#">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a></li>
+                                        <li style="--i:0.2s"><a href="">
+                                            <i class="fab fa-linkedin-in"></i>
+                                            </a></li>
+                                        <li style="--i:0.3s"><a href="">
+                                           <i class="fab fa-twitter"></i>
+                                            </a></li>
+                                        <li style="--i:0.4s"><a href="">
+                                           <i class="fab fa-instagram"></i>
+                                        </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="default-buton default-buton2">
+                                <a href="#">Download CV</a>
+                            </div>
+                            <div class="default-buton default-buton2 btn-none">
+                                <a href="#">Contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-xl-6 col-md-12 order-1 order-lg-2">
+                    <div class="hero-img">
+                        <img src="assets/images/banner/men.png" alt="men">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =======================about-us area====================== -->
+    <section id="about" class="about-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-8">
+                    <div class="img-wrapper about-img-wrap titlt" data-tilt data-tilt-max="4">
+                        <img class="about-img-1 img-fluid" src="assets/images/about/about.png" alt="about image">
+                    </div>
+                </div>
+                <div class="col-xl-6 ">
+                    <div class="section-title section-title2 text-start">
+                    <h2><span>About Me</span></h2>
+                        <h4>
+                            Senior Web Developer New York
+                        </h4>
+                    </div><!-- .section-title -->
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p>
+                        Tabore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. 
+                    </p>
+                    <div class="personal-details row">
+                        <div class="col-md-6 col-sm-6">
+                            <ul class="personal-info">
+                                <li>
+                                    <h4>Name</h4>
+                                    <p>John Son</p>
+                                </li>
+                                <li>
+                                    <h4>Email</h4>
+                                    <p>example@gmail.com</p>
+                                </li>
+                                <li>
+                                    <h4>Phone</h4>
+                                    <p>+123 456 7890</p>
+                                </li>
+                            </ul> <!-- .personal-info -->
+                        </div> <!-- .col-md-6 -->
+                        <div class="col-md-6 col-sm-6">
+                            <ul class="personal-info">
+                                <li>
+                                    <h4>Age</h4>
+                                    <p>27 Years</p>
+                                </li>
+                                <li>
+                                    <h4>Education</h4>
+                                    <p>Bachelors in Physics</p>
+                                </li>
+                                <li>
+                                    <h4>Freelance</h4>
+                                    <p>Available</p>
+                                </li>
+                            </ul> <!-- .personal-info -->
+                        </div> <!-- .col-md-6 -->
+                    </div> <!-- .personal-details -->
+                    <div class="about-info">
+                        <a class="btn-default" href="#">Download CV</a>
+                        <div class="signature">
+                            <img src="assets/images/about/sign2.png" alt="sing">
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+        <div class="design-elements">
+           <img class="de-about-1 elem-left" src="assets/images/about/b1.png" alt="about element 1">
+            <img class="de-about-2 elem-updown" src="assets/images/about/shape3.png" alt="about element 2">
+        </div> <!-- .design-elements -->
+        <div class="about-skill">
+             <div class="row">
+                <div class="col-12">
+                    <div class="tab-area-main-wrapper text-anim">
+                        <div id="tabs">
+                        <!-- tab area start -->
+                        <ul class="nav nav-tabs">
+                            <li><a href="#tabs-1">Description</a></li>
+                            <li><a href="#tabs-2">Awards</a></li>
+                            <li><a href="#tabs-3">Education</a></li>
+                            <li><a href="#tabs-4">Skillset</a></li>
+                        </ul>
+                        <!-- tab area End -->
+                        <!-- tab content area start -->
+                        <div class="tab-content" id="myTabContent">
+                            <div id="tabs-1">
+                                <div class="single-tab-wrapper">
+                                    <!-- single tab content -->
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-4">
+                                            <div class="content-main-text">
+                                                <h2 class="title">
+                                                    <span class="counter">100</span><span>+</span> <br><span class="text-white">Happy Clients</span>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                            <!-- single tab content hear -->
+                                                <div class="d-grid grid-sm-4 d-grid-no-space dsn-brand">
+                                                <div class="brand-item border-bottom border-right">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                      <img src="assets/images/brand/1.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item border-bottom border-right">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                       <img src="assets/images/brand/2.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item border-bottom border-right">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                      <img src="assets/images/brand/4.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item border-bottom">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                        <img src="assets/images/brand/5.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item border-right">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                        <img src="assets/images/brand/6.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item border-right">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                       <img src="assets/images/brand/4.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item border-right">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                        <img src="assets/images/brand/1.png" alt="br">
+                                                    </div>
+                                                </div>
+                                                <div class="brand-item">
+                                                    <div class="brand-item-inner  over-hidden p-relative ">
+                                                       <img src="assets/images/brand/2.png" alt="br">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!-- single tab content hear End -->
+                                        </div>
+                                    </div>
+                                    <!-- single tab content End -->
+                                </div>
+                            </div>
+                            <div id="tabs-2">
+                                <div class="single-tab-wrapper">
+                                    <!-- single tab content -->
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <!-- single tab content hear -->
+                                            <div class="thumbnail titlt" data-tilt data-tilt-max="4">
+                                                <img class="img-fluid" src="assets/images/about/cl.png" alt="About_image">
+                                            </div>
+                                            <!-- single tab content hear End -->
+                                        </div>
+                                        <div class="col-lg-6 pb_sm--20">
+                                            <div class="content-main">
+                                                <!-- single award area -->
+                                                <div class="single-award-area-marketer">
+                                                    <h6 class="title">Web design</h6>
+                                                    <p class="disc">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iste explicabo magnam corrupti .
+                                                    </p>
+                                                </div>
+                                                <!-- single award area end -->
+                                                <!-- single award area -->
+                                                <div class="single-award-area-marketer">
+                                                    <h6 class="title">Apps Development</h6>
+                                                    <p class="disc">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iste explicabo magnam corrupti .
+                                                    </p>
+                                                </div>
+                                                <!-- single award area end -->
+                                                <!-- single award area -->
+                                                <div class="single-award-area-marketer">
+                                                    <h6 class="title">Laravel Development</h6>
+                                                    <p class="disc">
+                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iste explicabo magnam corrupti .
+                                                    </p>
+                                                </div>
+                                                <!-- single award area end -->
+                                                <!-- single award area -->
+                                                <div class="single-award-area-marketer">
+                                                    <h6 class="title">Laravel Development</h6>
+                                                    <p class="disc">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, iste explicabo magnam corrupti .
+                                                    </p>
+                                                </div>
+                                                <!-- single award area end -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- single tab content End -->
+                                </div>
+                            </div>
+                            <div id="tabs-3">
+                                <div class="single-tab-wrapper">
+                                    <!-- single tab content -->
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6">
+                                            <div class="single-univercity-exp-4">
+                                                <span>Certificate of</span>
+                                                <h6 class="title">USA Community Collage</h6>
+                                                <p class="disc">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc.
+                                                </p>
+                                            </div>
+                                            <div class="single-univercity-exp-4">
+                                                <span>Certificate of</span>
+                                                <h6 class="title">Diploma & Course</h6>
+                                                <p class="disc">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc.
+                                                </p>
+                                            </div>
+                                            <div class="single-univercity-exp-4">
+                                                <span>Certificate of</span>
+                                                <h6 class="title">UI / UX Design</h6>
+                                                <p class="disc">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="single-univercity-exp-4">
+                                                <span>Certificate of</span>
+                                                <h6 class="title">North South New University</h6>
+                                                <p class="disc">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc.
+                                                </p>
+                                            </div>
+                                            <div class="single-univercity-exp-4">
+                                                <span>Certificate of</span>
+                                                <h6 class="title">Web Development Course</h6>
+                                                <p class="disc">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc.
+                                                </p>
+                                            </div>
+                                            <div class="single-univercity-exp-4">
+                                                <span>Certificate of</span>
+                                                <h6 class="title">Apps Development Course</h6>
+                                                <p class="disc">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- single tab content End -->
+                                </div>
+                            </div>
+                            <div id="tabs-4">
+                                <div class="single-tab-wrapper">
+                                    <!-- single tab content -->
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                            <div class="content-main">
+                                                <h2 class="title">
+                                                    Taking Dynamic Photos is all about my Passion
+                                                </h2>
+                                                <p class="about-disc">
+                                                    Viverra quisi integer portitor hac morbi nostra habitant varius
+                                                    tempor felissoc squaptent vestibulum lectus vel acmsan risus litora
+                                                    nibh velit pulvinar ornare porttitor consequat rutrum interdum
+                                                </p>
+                                                
+                                                <div class="progress-h4-area">
+                                                    <div class="single-progress-area-h4 sal-animate" data-sal-delay="100" data-sal="slide-up" data-sal-duration="800">
+                                                        <div class="progress-top">
+                                                            <p class="name">
+                                                               Web Design
+                                                            </p>
+                                                            <span class="parcent">
+                                                                85%
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar wow fadeInLeft" role="progressbar" style="width: 85%; visibility: visible; animation-name: fadeInLeft;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-progress-area-h4 sal-animate" data-sal-delay="200" data-sal="slide-up" data-sal-duration="800">
+                                                        <div class="progress-top">
+                                                            <p class="name">
+                                                               Web Development
+                                                            </p>
+                                                            <span class="parcent">
+                                                                65%
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar wow fadeInLeft" role="progressbar" style="width: 65%; visibility: visible; animation-name: fadeInLeft;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-progress-area-h4 sal-animate" data-sal-delay="300" data-sal="slide-up" data-sal-duration="800">
+                                                        <div class="progress-top">
+                                                            <p class="name">
+                                                               Laravel Development
+                                                            </p>
+                                                            <span class="parcent">
+                                                                75%
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar wow fadeInLeft " role="progressbar" style="width: 75%; visibility: visible; animation-name: fadeInLeft;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="single-progress-area-h4 sal-animate" data-sal-delay="400" data-sal="slide-up" data-sal-duration="800">
+                                                        <div class="progress-top">
+                                                            <p class="name">
+                                                                Apps Development
+                                                            </p>
+                                                            <span class="parcent">
+                                                                90%
+                                                            </span>
+                                                        </div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar wow fadeInLeft bg--primary" role="progressbar" style="width: 90%; visibility: visible; animation-name: fadeInLeft;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                                  <!-- skill accordion area start -->
+                                                <div class="accordion-skill-style" id="accordion">
+                                                    <div class="accordion" id="accordionExample">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingOne">
+                                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                    <span class="left">
+                                                                        <img src="assets/images/about/s1.png" alt="s">
+                                                                        <span class="disc">
+                                                                            <span class="title">Front-end Engineer</span>
+                                                                            <span class="desig">Twitter Limited</span>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="right">
+                                                                        <span class="date">
+                                                                            2018 - 2023
+                                                                        </span>
+                                                                    </span>
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    Nterdum dictum vitae purus varius. Proin sodales urna tempor morbinos at fermentum egestas rhoncus primis
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingTwo">
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                    <span class="left">
+                                                                        <img src="assets/images/about/s2.png" alt="s">
+                                                                        <span class="disc">
+                                                                            <span class="title">Back-End Engineer</span>
+                                                                            <span class="desig">Twitter Limited</span>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="right">
+                                                                        <span class="date">
+                                                                            2020 - 2021
+                                                                        </span>
+                                                                    </span>
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    Nterdum dictum vitae purus varius. Proin sodales urna tempor morbinos at fermentum egestas rhoncus primis
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="headingThree">
+                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                    <span class="left">
+                                                                      <img src="assets/images/about/s3.png" alt="s">
+                                                                        <span class="disc">
+                                                                            <span class="title">Softwere Engineer</span>
+                                                                            <span class="desig">Twitter Limited</span>
+                                                                        </span>
+                                                                    </span>
+                                                                    <span class="right">
+                                                                        <span class="date">
+                                                                            2021 - 2023
+                                                                        </span>
+                                                                    </span>
+                                                                </button>
+                                                            </h2>
+                                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                                <div class="accordion-body">
+                                                                    Nterdum dictum vitae purus varius. Proin sodales urna tempor morbinos at fermentum egestas rhoncus primis
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                            <!-- skill accordion area end -->
+                                        </div>
+                                    </div>
+                                    <!-- single tab content End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tab content area End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- ====================murque area=============================== -->
+    
+    <div class="merqur-area">
+         <!-- marquery tesxt area start -->
+        <div class="marquery-content">
+            <div class="marquee_text">.I am professional developer<span>.</span>hire me</div>
+        </div>
+        <!-- marquery tesxt area end -->
+     </div>   
+    <!--service area start-->
+     <section id="services" class="service-area">
+      <!--Services Background-->
+      <div class="service-background hidden-sm hidden-xs">
+        <div class="violate"></div>
+        <div class="dark"></div>
+      </div><!--Background ends-->
+      <div class="service-icon">
+          <img class="serv-1" src="assets/images/banner/circel.png" alt="banner">
+      </div>
+      <div class="container wrapper">
+        <div class="row">
+          <div class="service-contents">
+            <div class="col-md-4  col-sm-12 flot">
+              <div class="section-title section-title2 text-start">
+                    <h2><span  class="text-light text-orange">My Service</span></h2>
+                    <h4>
+                       Delivering beautiful digital products for you
+                    </h4>
+                </div><!-- .section-title -->
+              <p class="service-descrip">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaqueipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+            <div class="col-md-6 col-md-offset-2 flot">
+              <div class="service-item">
+                <span class="service-icon"><i class="fas fa-desktop"></i></span>
+                <div class="item-info">
+                    <h3 class="white">Desktop Apps</h3>
+                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-icon"><i class="fab fa-app-store"></i></span>
+                <div class="item-info">
+                    <h3 class="white">Web Development</h3>
+                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-icon"><i class="fas fa-gamepad"></i></span>
+                <div class="item-info">
+                    <h3 class="white">Mobile Apps</h3>
+                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                </div>
+              </div>
+              <div class="service-item">
+                <span class="service-icon"><i class="fab fa-uncharted"></i></span>
+                <div class="item-info">
+                    <h3 class="white">Web Design</h3>
+                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial-slider -->
+    <section id="testimonial"  class="testimonial-area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h2><span>TESTIMONIALS</span></h2>
+                    <h4>
+                        My Generous Satisfied Client Who Love My Work.
+                    </h4>
+                </div><!-- .section-title -->
+            </div>
+            <div class="row pt-60">
+                <div class="testimonial-slider owl-carousel owl-theme">
+                    <div class="item-wrapper ">
+                        <div class="content-wrapper">
+                         <div class="qute">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                           <div class="rating">
+                               <ul>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                               </ul>
+                           </div>
+                            <p>
+                                Duis aute irure dolor in it esse cillum dolore eu fugiat nulla pari erunt mollit anim id est laborum.
+                            </p>
+                            <div class="quote-author">
+                                <div class="image-block">
+                                    <img class="img-fluid" src="assets/images/testimonial/m1.jpg" alt="testimonial author">
+                                </div>
+                                <h4>Mark Anthony <span>Web Developer</span></h4>
+                            </div>
+                        </div> <!-- .content-wrapper -->
+                    </div> <!-- .item-wrapper -->
+                     <div class="item-wrapper ">
+                        <div class="content-wrapper">
+                         <div class="qute">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                           <div class="rating">
+                               <ul>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                               </ul>
+                           </div>
+                            <p>
+                                Duis aute irure dolor in it esse cillum dolore eu fugiat nulla pari erunt mollit anim id est laborum.
+                            </p>
+                            <div class="quote-author">
+                                <div class="image-block">
+                                    <img class="img-fluid" src="assets/images/testimonial/m2.jpg" alt="testimonial author">
+                                </div>
+                                <h4>Mark Wood <span>Apps Developer</span></h4>
+                            </div>
+                        </div> <!-- .content-wrapper -->
+                    </div> <!-- .item-wrapper -->
+                     <div class="item-wrapper ">
+                        <div class="content-wrapper">
+                         <div class="qute">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                           <div class="rating">
+                               <ul>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                               </ul>
+                           </div>
+                            <p>
+                                Duis aute irure dolor in it esse cillum dolore eu fugiat nulla pari erunt mollit anim id est laborum.
+                            </p>
+                            <div class="quote-author">
+                                <div class="image-block">
+                                    <img class="img-fluid" src="assets/images/testimonial/m4.jpg" alt="testimonial author">
+                                </div>
+                                <h4>Anthony John<span>Web Designer</span></h4>
+                            </div>
+                        </div> <!-- .content-wrapper -->
+                    </div> <!-- .item-wrapper -->
+                     <div class="item-wrapper ">
+                        <div class="content-wrapper">
+                         <div class="qute">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                           <div class="rating">
+                               <ul>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                                   <li><i class="fas fa-star"></i></li>
+                               </ul>
+                           </div>
+                            <p>
+                                Duis aute irure dolor in it esse cillum dolore eu fugiat nulla pari erunt mollit anim id est laborum.
+                            </p>
+                            <div class="quote-author">
+                                <div class="image-block">
+                                    <img class="img-fluid" src="assets/images/testimonial/m3.jpg" alt="testimonial author">
+                                </div>
+                                <h4>Alison <span>Softwate Developer</span></h4>
+                            </div>
+                        </div> <!-- .content-wrapper -->
+                    </div> <!-- .item-wrapper -->
+                </div>
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+        <div class="design-elements">
+            <img class="de-intro-1 elem-updown" src="assets/images/testimonial/shape2.png" alt="intro element 1">
+            <img class="de-about-2 elem-updown" src="assets/images/about/b2.png" alt="about element 2">
+        </div> <!-- .design-elements -->
+    </section>
+    <!-- pricing-area -->
+    <section id="pricing" class="pricing-area section-padding">
+        <div class="container container2">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h2><span>My Pricing</span></h2>
+                    <h4>
+                       I Give You The Best
+                    </h4>
+                </div><!-- .section-title -->
+            </div>
+            <div class="row ppt-60">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-l2 col-md-4 col-sm-6 grid p-out">
+                            <div class="price-item">
+                                <div class="pricing-header">
+                                    <h3>Basic</h3>
+                                </div>
+                                <div class="pricing-table pricing-table-side">
+                                    <div class="price-sub-header pricing-header-c">
+                                        <h4><span>$</span>30</h4>
+                                        <h5>Per Month</h5>
+                                    </div>
+                                    <ul>
+                                        <li>Web Design</li>
+                                        <li>Web Development</li>
+                                        <li>Responsive Design</li>
+                                        <li>Creative Design</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+                                        <div class="default-buton default-buton2"><a href="#">Order Now</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-l2 col-md-4 col-sm-6  grid p-out">
+                            <div class="price-item price-item-2">
+                                <div class="pricing-header">
+                                    <h3>Standard</h3>
+                                </div>
+                                <div class="pricing-table pricing-table-2">
+                                    <div class="price-sub-header">
+                                        <h4><span>$</span>50</h4>
+                                        <h5>Per Month</h5>
+                                    </div>
+                                    <ul>
+                                        <li>Web Design</li>
+                                        <li>Web Development</li>
+                                        <li>Responsive Design</li>
+                                        <li>Creative Design</li>
+                                    </ul>
+                                    <div class="pricing-footer pricing-footer-2">
+                                        <div ><a class="btn-default" href="#">Order Now</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-l2 col-md-4 col-sm-6 grid  p-out p-out-t">
+                            <div class="price-item price-item-3">
+                                <div class="pricing-header">
+                                    <h3>Premium</h3>
+                                </div>
+                                <div class="pricing-table  pricing-table-side">
+                                    <div class="price-sub-header pricing-header-b">
+                                        <h4><span>$</span>50</h4>
+                                        <h5>Per Month</h5>
+                                    </div>
+                                    <ul>
+                                        <li>Web Design</li>
+                                        <li>Web Development</li>
+                                        <li>Responsive Design</li>
+                                        <li>Creative Design</li>
+                                    </ul>
+                                    <div class="pricing-footer">
+                                        <div class="default-buton default-buton2"><a  href="#">Order Now</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="design-elements">
+            <img class="de-about-1 elem-updown" src="assets/images/about/b5.png" alt="about element 1">
+            <img class="de-about-2 elem-updown" src="assets/images/about/b2.png" alt="about element 2">
+        </div> <!-- .design-elements -->
+    </section>
+    <!--start project area-->
+    <section id="portfolio" class="project-area-cul">
+        <div class="project-bg" style="background-image: url(assets/images/project/bg3.png);"></div>
+        <div class="background-overlay bg-1"></div>
+        <div class="container-two">
+            <div class="row">
+                <div class="section-title section-title2 project-title">
+                    <h2><span>Projects</span></h2>
+                    <h4>
+                       Latest completed Projects
+                    </h4>
+                </div><!-- .section-title -->
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="slider-div">
+                        <div class="project-slider owl-carousel owl-theme">
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/1.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Development</p>
+                                        <h3><a href="projects-details.html">Web Design</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/2.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Apps</p>
+                                        <h3><a href="projects-details.html">Apps Development</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/3.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Development</p>
+                                        <h3><a href="projects-details.html">Laravel Development</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/4.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Development</p>
+                                        <h3><a href="projects-details.html">Php Development</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/5.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Development</p>
+                                        <h3><a href="projects-details.html">Wordpress Development</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/1.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Development</p>
+                                        <h3><a href="projects-details.html">Web Design</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-single">
+                                <div class="projects-single-img">
+                                    <img src="assets/images/project/2.jpeg" alt="img">
+                                    <div class="overlay-content">
+                                        <p>Development</p>
+                                        <h3><a href="projects-details.html">Apps Development</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--end project area-->
+    <!-- blog-area -->
+    <section id="blog" class="blog-area section-padding">
+        <div class="background-overlay bg-1"></div>
+        <div class="container-two">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h2><span>BLOG & NEWS</span></h2>
+                    <h4>
+                        Latest News From Blog.
+                    </h4>
+                </div><!-- .section-title -->
+            </div>
+            <div class="row pt-60">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img class="img-fluid" src="assets/images/blog/2.jpg"  alt="blog" >
+                    </div>
+                    <div class="blog-content">
+                        <ul>
+                            <li><a href="">25 Feb, 2023</a></li>
+                            <li>by: Abul Haidar</li>
+                        </ul>
+                        <h2>
+                            <a href="">We provide advanced solution growin your online</a>
+                        </h2>
+                            <a class="arrow-btn" href=""><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="blog-item">
+                    <div class="blog-img">
+                        <img class="img-fluid" src="assets/images/blog/1.jpg"  alt="blog" >
+                    </div>
+                    <div class="blog-content">
+                        <ul>
+                            <li><a href="">22 March, 2023</a></li>
+                            <li>by: Nurul Islam</li>
+                        </ul>
+                        <h2>
+                            <a href="">We provide better solution growin your online</a>
+                        </h2>
+                            <a class="arrow-btn" href=""><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="blog-item">
+                    <div class="blog-img">
+                        <img class="img-fluid" src="assets/images/blog/3.jpg"  alt="blog" >
+                    </div>
+                    <div class="blog-content">
+                        <ul>
+                            <li><a href="">25 April, 2022</a></li>
+                            <li>by: Hasan Abir</li>
+                        </ul>
+                        <h2>
+                            <a href="">We provide advanced solution growin your Offline</a>
+                        </h2>
+                            <a class="arrow-btn" href=""><i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="design-elements">
+            <img class="de-about-1 elem-updown" src="assets/images/about/b1.png" alt="about element 1">
+            <img class="de-about-2 elem-updown" src="assets/images/about/b6.png" alt="about element 2">
+        </div> <!-- .design-elements -->
+    </section>
+     <!-- ========== contact section ========== -->
+    <section id="contact" class="contact-area">
+            <div class="container">
+                <div class="row">
+                     <div class="col-xl-8 col-lg-7">
+                        <div class="contact-right">
+                            <div class="section-title section-title2 text-start">
+                            <h2><span>Contact Now</span></h2>
+                                <h4>
+                                    Get in touch now
+                                </h4>
+                            </div>
+                            <p class="contact-one__text">Lorem ipsum dolor sit amet, adipiscing elit. In hac habitasse
+                            platea dictumst. Duis porta, <br> quam ut finibus ultrices.</p>
+                            <div class="row">
+                                <div class="contact-forms">
+                                    <form id="contact-form" method="POST" action="mail.php">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Your Name" name="name">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Email Address" name="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <div class="form-group">
+                                                    <textarea name="message" rows="5" class="form-control" placeholder="Write a Message"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn-default">Send Message <i class="fas fa-long-arrow-alt-right"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="ajax-response"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-5 align-self-center">
+                        <div class="contact-left">
+                            <div class="contact-content">
+                                 <div class="contact-icon">
+                                    <i class="fas fa-headphones-alt"></i>
+                                    <h4>Write me a message</h4>
+                                </div>
+                                 <ul class="contact-list">
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fas fa-phone-alt"></span>
+                                        </div>
+                                        <div class="content">
+                                            <p>Have Question?</p>
+                                            <h4><a href="#">+9876543214</a></h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fas fa-envelope"></span>
+                                        </div>
+                                        <div class="content">
+                                            <p>Write Email</p>
+                                            <h4><a href="#">example@gmail.com</a></h4>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="fas fa-map-marker"></span>
+                                        </div>
+                                        <div class="content">
+                                            <p>Visit Now</p>
+                                            <h4>250/A Thana StreetView, Tejgaon, Dhaka Bangladesh</h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div> 
+                           <div class="image-wrapper">
+                                <img class="img-fluid" src="assets/images/about/footer.jpg" alt="post thumnail">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+     <!-- ========== Footer ========== -->
+     <footer class="footer-area">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-3">
+                     <div class="ft-single">
+                         <div class="ft-logo">
+                             <img src="assets/images/logo.png" alt="">
+                         </div>
+                         <div class="ft-social">
+                             <ul>
+                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3">
+                     <div class="ft-single">
+                         <div class="ft-title">
+                             <h4>NAVIGATION</h4>
+                         </div>
+                         <div class="ft-list">
+                             <ul class="menu-ft">
+                                    <li class="menu-item">
+                                        <a href="home.html" class="effect-ajax">HOME</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="work-classic-2.html" class="effect-ajax">PORTFOLIO</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="stories.html" class="effect-ajax">NEWS</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="about-us.html" class="effect-ajax">ABOUT</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="contact.html" class="effect-ajax">CONTACT</a>
+                                    </li>
+
+                                </ul>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3">
+                     <div class="ft-single">
+                         <div class="ft-title">
+                             <h4>Contact Us</h4>
+                         </div>
+                         <div class="col-contact">
+                            <p><strong>T</strong> : +001 225 3351</p>
+                            <p class="mt-10"><strong>F</strong> :+001 225 3351</p>
+                            <p class="over-hidden mt-10">
+                                <strong>E</strong> : <a class="link-hover" href="#" data-hover-text="info@dsngrid.com">example@gmail.com</a>
+                            </p>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="col-lg-3">
+                     <div class="ft-single">
+                         <div class="ft-title">
+                             <h4>ADDRESS</h4>
+                         </div>
+                         <div class="col-address">
+                            <p>
+                                250/A Thana StreetView, <br>Tejgaon, Dhaka<br> Bangladesh
+                            </p>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-bottom">
+                     <p>© Copyright 2023. Johnson Template</p>
+                    </div>
+                </div>
+             </div>
+         </div>
+     </footer>
+      <!--scroll-->
+    <div class="scroll-area">
+       <i class="fa fa-angle-up"></i>
+    </div>
+    
+    <!--jQuery js-->
+    <script src="assets/js/jquery-3.6.4.min.js"></script>
+    <!--proper js-->
+    <script src="assets/js/popper.min.js"></script>
+    <!--bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--carousel js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--mainmenu js-->
+    <script src="assets/js/meanmenu.min.js"></script>
+    <!--waypoints js-->
+    <script src="assets/js/waypoints.js"></script>
+    <!--mar js-->
+    <script src="assets/js/mar.min.js"></script>
+    <!--counter js-->
+    <script src="assets/js/jequry.counter.js"></script>
+    <!--wow js-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--ui js-->
+     <script src="assets/js/jquery-ui.min.js"></script>
+     <!--ui js-->
+     <script src="assets/js/tilt.jquery.min.js"></script>
+    <!--ui js-->
+     <script src="assets/js/jquery-nav.min.js"></script>
+     <!--ajax js-->
+     <script src="assets/js/ajax-form.js"></script>
+    <!--main js-->
+    <script src="assets/js/custom.js"></script>
+
+  
+</body>
+
 </html>
+
+
