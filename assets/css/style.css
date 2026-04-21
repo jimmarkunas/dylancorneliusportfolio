@@ -966,7 +966,7 @@ p {
 .about-section{
     background: linear-gradient(90deg, #000000 -5.83%, #232323 25.2%, #000000 102.5%);
     position: relative;
-    padding-bottom: 500px;
+    padding-bottom: 120px;
 }
 .about-section .content-block h2 {
     font-size: 48px;
@@ -1494,11 +1494,13 @@ p {
 }
 .testimonial-slider .item-wrapper {
   border: 1px solid #e0e0e0;
- padding: 60px 48px 48px;
+ padding: 52px 36px 32px;
   border-radius: 12px;
   position: relative;
- background: #2f2f2f;
+  background: #2f2f2f;
   transition: 0.3s;
+  height: 360px;
+  display: flex;
 }
 .testimonial-slider .item-wrapper:after {
   content: '';
@@ -1521,6 +1523,21 @@ p {
 .testimonial-slider .content-wrapper ul{
   display: flex;
 }
+.testimonial-slider .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.testimonial-slider .content-wrapper p {
+  min-height: 84px;
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
 .testimonial-slider .content-wrapper ul li{
     padding: 10px 12px;
     color: #FD562A;
@@ -1537,6 +1554,7 @@ p {
   position: absolute;
   left: 5%;
   top: 10%;
+  display: none !important;
 }
 .content-wrapper .qute {
     position: absolute;
@@ -1556,13 +1574,22 @@ p {
 }
 .testimonial-slider .quote-author{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-top: auto;
 }
 .testimonial-slider .quote-author .image-block {
+    width: 84px;
+    height: 84px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 18px;
+    flex: 0 0 84px;
+}
+.testimonial-slider .quote-author .image-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .testimonial-slider .item-wrapper h4{
     color: #fff;
