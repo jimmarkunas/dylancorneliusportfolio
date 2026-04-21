@@ -1,5 +1,6 @@
 (function ($) {
     "use strict";
+    document.documentElement.classList.add('js-enabled');
      // WOW JS
     new WOW().init();
 
