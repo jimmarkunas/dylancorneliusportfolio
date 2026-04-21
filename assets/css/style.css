@@ -519,6 +519,7 @@ p {
     line-height: 30px;
     text-align: center;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 
 .header-area.sticky {
@@ -2308,6 +2309,7 @@ p {
     font-size: 28px;
     font-weight: 700;
     box-shadow: 0 8px 24px rgba(255, 102, 0, 0.25);
+    white-space: nowrap;
 }
 .cta-panel-btn:hover {
     color: #FF6600;
