@@ -76,7 +76,7 @@
     right: 0;
     top: 150px;
     width: 48%;
-    animation: anim-updown 5s infinite;
+    animation: none;
 }
 .tab-area-main-wrapper.text-anim {
     width: 960px;
@@ -297,7 +297,13 @@ top: 0;
         float: left;
         position: relative;
         z-index: 999999;
-        width: 50%
+        width: 68%
+    }
+    .site-logo img {
+        height: 34px;
+    }
+    .site-logo .logo-text {
+        font-size: 19px;
     }
 
     .mean-container a.meanmenu-reveal {
@@ -523,7 +529,7 @@ top: 0;
 }
 .counter-single p {
     font-size: 14px;
-    text-align: start;
+    text-align: center;
     line-height: 20px;
 }
 .btn-none{
