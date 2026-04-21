@@ -132,11 +132,120 @@
     -ms-flex-preferred-size: 23%;
     flex-basis: 23%;
     text-align: start !important;
-}
-.tab-area-main-wrapper.text-anim {
-    width:960px;
+    }
+    .tab-area-main-wrapper.text-anim {
+        width:960px;
+    }
 }
 
+@media only screen and (max-width: 991px){
+    .process-area .section-title h2 span {
+        font-size: 17px;
+    }
+    .process-card {
+        padding: 26px;
+        border-radius: 16px;
+    }
+    .process-card--hero {
+        min-height: 0;
+    }
+    .process-card h3 {
+        font-size: 34px;
+    }
+    .process-card p {
+        font-size: 20px;
+    }
+    .process-card ul li {
+        font-size: 17px;
+    }
+    .faq-question {
+        font-size: 20px;
+        padding: 18px 20px;
+    }
+    .faq-answer {
+        padding: 0 20px 18px;
+    }
+    .faq-answer p {
+        font-size: 16px;
+    }
+    .cta-panel-card {
+        padding: 70px 34px;
+        border-radius: 24px;
+    }
+    .cta-panel-card h2 {
+        font-size: 44px;
+    }
+    .cta-panel-card p {
+        font-size: 24px;
+    }
+    .cta-panel-btn {
+        font-size: 21px;
+        padding: 14px 30px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 12px;
+    }
+    .process-card {
+        padding: 22px 20px;
+        border-radius: 16px;
+    }
+    .process-card h3 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .process-card p {
+        font-size: 18px;
+    }
+    .process-card ul {
+        margin-top: 12px;
+    }
+    .process-card ul li {
+        font-size: 16px;
+        padding-left: 18px;
+    }
+    .process-card ul li::before {
+        width: 7px;
+        height: 7px;
+        top: 8px;
+    }
+    .faq-question {
+        font-size: 18px;
+        padding: 16px 16px;
+    }
+    .faq-answer {
+        padding: 0 16px 16px;
+    }
+    .faq-icon {
+        font-size: 22px;
+    }
+    .cta-panel-area {
+        padding-top: 24px;
+        padding-bottom: 44px;
+    }
+    .cta-panel-card {
+        padding: 44px 20px;
+        border-radius: 18px;
+    }
+    .cta-panel-card::before {
+        background-size: 72px 72px;
+    }
+    .cta-panel-card h2 {
+        font-size: 31px;
+        margin-bottom: 18px;
+    }
+    .cta-panel-card p {
+        font-size: 17px;
+    }
+    .cta-panel-btn {
+        margin-top: 28px;
+        font-size: 18px;
+        padding: 12px 22px;
+    }
 }
 /*--------------------------------------------------------------
     laptop

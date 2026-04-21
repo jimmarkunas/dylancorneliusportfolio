@@ -56,43 +56,6 @@
                 });
             }
 
-            /*---------------------------------------------------
-           project-slider
-        ----------------------------------------------------*/
-        var $project = $('.project-slider');
-        if($project.length > 0){
-            $('.project-slider').owlCarousel({
-                loop: true,
-                nav: false,
-                autoplay: true,
-                autoplayTimeout: 5000,
-                animateOut: 'fadeOut',
-                animateIn: 'fadeIn',
-                smartSpeed: 450,
-                margin: 30,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    660:{
-                         items: 2
-                     },
-                    768: {
-                        items: 2
-                    },
-                    991: {
-                        items: 3
-                    },
-                    1200: {
-                        items: 3
-                    },
-                    1920: {
-                        items: 3
-                    }
-                }
-            });
-        }
-
     });
 
 
@@ -122,9 +85,9 @@
         Scroll Area
     ----------------------------------------------------*/
     var $scroll = $('.scroll-area');
-    if($scroll.length > 0){
-        $(document).ready(function(){
-            $('.scroll-area').click(function(){
+        if($scroll.length > 0){
+            $(document).ready(function(){
+                $('.scroll-area').click(function(){
                 $('html').animate({
                     'scrollTop' : 0,
                 },700);
@@ -137,15 +100,59 @@
                 }else{
                     $('.scroll-area').slideUp(200);
                 }
+                });
             });
-        });
-    }
+        }
+
+        /*---------------------------------------------------
+            global reveal animations
+        ----------------------------------------------------*/
+        var revealNodes = document.querySelectorAll(
+            'section .section-title, section .hero-content, section .hero-img, section .service-item, ' +
+            'section .counter-single, section .img-wrapper, section .about-info, section .testimonial-slider .item-wrapper, ' +
+            'section .process-card, section .faq-item, section .cta-panel-card, footer .ft-single, footer .footer-bottom'
+        );
+
+        if (revealNodes.length > 0) {
+            revealNodes.forEach(function (el, idx) {
+                el.classList.add('reveal-in');
+                el.style.transitionDelay = (Math.min(idx, 12) * 0.05) + 's';
+            });
+
+            var revealAll = function () {
+                revealNodes.forEach(function (el) {
+                    el.classList.add('is-visible');
+                });
+            };
+
+            if ('IntersectionObserver' in window) {
+                var revealObserver = new IntersectionObserver(function (entries, obs) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+                revealNodes.forEach(function (el) {
+                    revealObserver.observe(el);
+                });
+
+                // Safety fallback if observer timing misses anything.
+                setTimeout(revealAll, 2800);
+            } else {
+                revealAll();
+            }
+        }
     
         /*---------------------------------------------------
         preloader
         ----------------------------------------------------*/
         $(window).on('load', function () {
-            $('.preloader').fadeOut(500);
+            setTimeout(function () {
+                $('.preloader').fadeOut(450);
+            }, 350);
         });
 
       /*================================================================= 
@@ -186,10 +193,66 @@
         /*================================================================= 
             Animating numbers
         ==================================================================*/
-        $('.counter').counterUp({
-            delay: 10,
-            time: 3000
-        });
+        var $counters = $('.counter');
+        if($counters.length > 0){
+            $counters.each(function () {
+                var endVal = parseInt($(this).text(), 10);
+                if (!isNaN(endVal)) {
+                    $(this).attr('data-target', endVal);
+                    $(this).text('0');
+                }
+            });
+
+            var animateCounter = function (el) {
+                var end = parseInt(el.getAttribute('data-target'), 10);
+                if (isNaN(end)) return;
+                var duration = 1600;
+                var startTime = null;
+
+                var step = function (timestamp) {
+                    if (!startTime) startTime = timestamp;
+                    var progress = Math.min((timestamp - startTime) / duration, 1);
+                    el.textContent = Math.floor(progress * end);
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        el.textContent = end;
+                    }
+                };
+
+                window.requestAnimationFrame(step);
+            };
+
+            var triggerCounters = function () {
+                $counters.each(function () {
+                    if (!this.dataset.counted) {
+                        this.dataset.counted = 'true';
+                        animateCounter(this);
+                    }
+                });
+            };
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries, obs) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && !entry.target.dataset.counted) {
+                            entry.target.dataset.counted = 'true';
+                            animateCounter(entry.target);
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.4 });
+
+                $counters.each(function () {
+                    observer.observe(this);
+                });
+
+                // Fallback: if observer misses due layout/render timing, still run once.
+                setTimeout(triggerCounters, 1800);
+            } else {
+                triggerCounters();
+            }
+        }
 
       
         
