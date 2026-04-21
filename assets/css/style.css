@@ -353,12 +353,25 @@ p {
 }
 
 .site-logo img {
-    max-width: 160px;
+    height: 44px;
+    width: auto;
+    max-width: none;
 }
 .site-logo a{
     color: #fff;
+    text-decoration: none;
+}
+.site-logo .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.site-logo .logo-text {
+    color: #fff;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 24px;
+    line-height: 1;
+    white-space: nowrap;
 }
 .main-menu-area {
     -ms-flex-preferred-size: 55%;
@@ -370,6 +383,7 @@ p {
 .header-log-reg {
     -ms-flex-preferred-size: 19%;
     flex-basis: 19%;
+    margin-left: auto;
 }
 
 .main-menu-area ul li {
@@ -436,15 +450,15 @@ p {
 
 .header-log-reg ul {
     background-color: #FF6600;
-    border-radius: 4px;
+    border-radius: 999px;
     display: inline-block;
-    padding: 5px 20px;
+    padding: 1px 39px;
 }
 
 .header-log-reg ul li {
     display: inline-block;
     color: #fff;
-    padding: 7px 0;
+    padding: 8px 0;
 }
 
 .header-log-reg ul li small {
@@ -698,11 +712,25 @@ p {
     right: 0;
     top: 295px;
     width: 48%;
-    animation: anim-updown 5s infinite;
+    animation: none;
 }
 .shape img{
     width: 100%;
     height: auto;
+}
+
+/* Keep the hero frame fully static */
+.hero-banner .shape,
+.hero-banner .shape img {
+    animation: none !important;
+    transform: none !important;
+}
+
+.hero-banner .shape.no-motion,
+.hero-banner .shape.no-motion img {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
 }
 
 .hero-content h2 span{
@@ -773,7 +801,13 @@ p {
 .counter-single h2 {
     font-size: 50px;
     margin-bottom: 1px;
-    text-align: start;
+    text-align: center;
+}
+.counter-single p {
+    text-align: center;
+}
+.counter-single.stat-three h2 {
+    white-space: nowrap;
 }
 
 .hero-buttons{
@@ -893,6 +927,8 @@ p {
 .hero-buttons {
     display: flex;
     justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 .btn-default{
     padding: 16px 38px;
@@ -908,14 +944,14 @@ p {
 }
 .default-buton2 a {
     padding: 16px 38px;
-    background: #fdfdfd;
-    color: #FF6600;
+    background: #FF6600;
+    color: #fff;
     display: inline-block;
     font-size: 18px;
     border-radius: 30px;
 }
 .default-buton2 a:hover{
-    background: #FF6600;
+    background: #e65c00;
     color: #fff;
    transition: all 0.3s ease;
 }
