@@ -149,10 +149,14 @@ p {
     Global Reveal Animation
 ---------------------------------------------------------------------*/
 .reveal-in {
-    opacity: 0;
-    transform: translateY(26px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.7s ease, transform 0.7s ease;
     will-change: opacity, transform;
+}
+.js-enabled .reveal-in {
+    opacity: 0;
+    transform: translateY(26px);
 }
 .reveal-in.is-visible {
     opacity: 1;
