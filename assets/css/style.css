@@ -967,7 +967,7 @@ p {
 .about-section{
     background: linear-gradient(90deg, #000000 -5.83%, #232323 25.2%, #000000 102.5%);
     position: relative;
-    padding-bottom: 120px;
+    padding-bottom: 40px;
 }
 .about-section .content-block h2 {
     font-size: 48px;
