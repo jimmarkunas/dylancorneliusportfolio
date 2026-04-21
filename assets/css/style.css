@@ -797,14 +797,15 @@ p {
 .hero-counter{
     display: flex;
     justify-content:space-between;
+    align-items: flex-start;
 }
 .counter-single h2 {
     font-size: 50px;
     margin-bottom: 1px;
-    text-align: center;
+    text-align: left;
 }
 .counter-single p {
-    text-align: center;
+    text-align: left;
 }
 .counter-single.stat-three h2 {
     white-space: nowrap;
@@ -2244,8 +2245,16 @@ p {
 .ft-social {
     margin-top: 20px;
 }
+.ft-logo {
+    text-align: center;
+}
+.ft-logo img {
+    display: block;
+    margin: 0 auto;
+}
 .ft-social ul{
     display: flex;
+    justify-content: center;
 }
 .ft-social ul li{
     padding: 9px 4px;
@@ -2258,10 +2267,19 @@ p {
     display: block;
     text-align: center;
     line-height: 50px;
+    transition: all 0.3s ease;
 }
 .ft-social ul li a i {
     color: #fff;
     font-size: 16px;
+    transition: color 0.3s ease;
+}
+.ft-social ul li a:hover {
+    background: #FF6600;
+    border-color: #FF6600;
+}
+.ft-social ul li a:hover i {
+    color: #fff;
 }
 .ft-single .ft-title  {
     margin-bottom: 20px;
@@ -2309,6 +2327,80 @@ p {
 }
 .col-contact p a{
     color: #fff;
+}
+.secure-payments {
+    display: block;
+}
+.secure-payments img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.footer-layout-v2 {
+    row-gap: 24px;
+}
+.footer-layout-v2 .ft-single {
+    margin-top: 0;
+}
+.footer-brand-col .ft-logo img {
+    max-width: 150px;
+}
+.footer-brand-copy {
+    margin: 18px auto 0;
+    max-width: 360px;
+    text-align: center;
+    color: #b8b8b8;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.footer-brand-col .ft-social {
+    margin-top: 20px;
+}
+.footer-info-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    max-width: 520px;
+    margin-left: auto;
+}
+.footer-layout-v2 .ft-title {
+    margin-bottom: 0;
+}
+.footer-layout-v2 .footer-kicker {
+    margin: 0;
+    background: transparent;
+    color: #FF6600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0;
+}
+.footer-layout-v2 .footer-kicker::after {
+    display: none;
+}
+.footer-info-col .col-contact p {
+    font-size: 17px;
+    line-height: 1.2;
+    color: #f0f0f0;
+}
+.footer-info-col .col-contact p + p {
+    margin-top: 8px;
+}
+.footer-info-col .col-contact p strong {
+    color: #ffffff;
+}
+.footer-info-col .col-contact p a {
+    color: #ffffff;
+}
+.footer-info-col .secure-payments {
+    width: 100%;
+    max-width: 460px;
+    margin-top: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
 }
 .mt{
     margin-top: 10px;

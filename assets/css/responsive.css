@@ -95,6 +95,22 @@
 .container-two {
   max-width: 550px;
 }
+.footer-layout-v2 {
+    row-gap: 18px;
+}
+.footer-brand-col,
+.footer-info-col {
+    max-width: 100%;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+}
+.footer-info-col .col-contact p {
+    font-size: 16px;
+}
+.footer-info-col .secure-payments {
+    max-width: 460px;
+}
 }
 
 
