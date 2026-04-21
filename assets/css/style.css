@@ -1542,10 +1542,14 @@ p {
  padding: 52px 36px 32px;
   border-radius: 12px;
   position: relative;
-  background: #2f2f2f;
+  background: #2f2f2f !important;
   transition: 0.3s;
   height: 360px;
   display: flex;
+}
+.testimonial-slider .item-wrapper,
+.testimonial-slider .item-wrapper * {
+  background-clip: padding-box;
 }
 .testimonial-slider .item-wrapper:after {
   display: none !important;

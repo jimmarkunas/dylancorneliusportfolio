@@ -32,30 +32,37 @@
         ----------------------------------------------------*/
        ///testimonial
         var $full = $('.testimonial-slider');
-            if($full.length > 0){
-            $(document).ready(function(){
-                $(".testimonial-slider").owlCarousel({
-                    loop:true,
-                    center:false,
-                    margin:40,
-                    items:3,
-                    autoplay: true,
-                    nav: false,
-                    responsive : {
-                            0 : {
-                               items:1,
-                            },
-                            
-                            768 : {
-                                 items:2,
-                            },
-                             991 : {
-                                 items:3,
-                            }
-                        }
-                    });
-                });
-            }
+        if($full.length > 0 && $.fn.owlCarousel){
+            $full.owlCarousel({
+                loop:true,
+                center:false,
+                margin:40,
+                items:3,
+                autoplay: true,
+                autoplayTimeout: 3500,
+                autoplayHoverPause: false,
+                nav: false,
+                responsive : {
+                    0 : {
+                       items:1,
+                    },
+                    768 : {
+                         items:2,
+                    },
+                     991 : {
+                         items:3,
+                    }
+                },
+                onInitialized: function(event) {
+                    $(event.target).trigger('play.owl.autoplay', [3500]);
+                }
+            });
+
+            // Safety restart for live environments where autoplay may pause on first render.
+            setTimeout(function () {
+                $full.trigger('play.owl.autoplay', [3500]);
+            }, 900);
+        }
 
     });
 
