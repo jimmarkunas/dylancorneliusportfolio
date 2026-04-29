@@ -78,24 +78,29 @@
 
         .hero-cta-group {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             gap: 14px;
-            margin-top: 10px;
+            margin-top: auto;
+            padding-top: 28px;
+            align-items: center;
         }
 
         .hero-cta-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            min-width: 190px;
-            padding: 12px 18px;
+            min-width: 260px;
+            min-height: 72px;
+            padding: 16px 24px;
             border-radius: 8px;
             color: #fff;
             font-weight: 700;
-            font-size: 16px;
+            font-size: 34px;
             line-height: 1;
             text-decoration: none;
             transition: transform 0.2s ease, opacity 0.2s ease;
+            text-align: center;
         }
 
         .hero-cta-btn:hover {
@@ -118,6 +123,9 @@
 
         .hero-banner .hero-content {
             margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: min(62vw, 700px);
         }
 
         .hero-banner .hero-content h2 {
@@ -131,6 +139,7 @@
         @media (max-width: 991px) {
             .hero-banner .hero-content {
                 margin-top: 0;
+                min-height: auto;
             }
 
             .hero-banner .shape {
@@ -143,6 +152,8 @@
 
             .hero-cta-btn {
                 min-width: 100%;
+                min-height: 62px;
+                font-size: 28px;
             }
         }
     </style>
@@ -163,9 +174,9 @@
                             <p class="hero-microcopy">Free · 30 minutes · No pitch · Trusted since 2016</p>
                         </div>
                          <div class="hero-cta-group wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.25s">
-                            <a href="#" class="hero-cta-btn hero-cta-orange">CTA Placeholder</a>
-                            <a href="#" class="hero-cta-btn hero-cta-brown">CTA Placeholder</a>
-                            <a href="#" class="hero-cta-btn hero-cta-blue">CTA Placeholder</a>
+                            <a href="#" class="hero-cta-btn hero-cta-orange">Are you ready for a smarter next move?</a>
+                            <a href="#" class="hero-cta-btn hero-cta-brown">What work actually suits you?</a>
+                            <a href="#" class="hero-cta-btn hero-cta-blue">Need stable work fast?</a>
                          </div>
                     </div>
                 </div>

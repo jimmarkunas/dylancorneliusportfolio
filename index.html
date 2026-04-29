@@ -36,59 +36,130 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=20260423">
     <!--responsive css-->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css?v=20260422">
+    <style>
+        :root {
+            --hero-top-align: 135px;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            background: #161616;
+            overflow-x: hidden;
+        }
+
+        .hero-banner {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            background: #161616;
+            padding-top: var(--hero-top-align);
+        }
+
+        .hero-banner .container {
+            width: 100%;
+        }
+
+        .hero-banner .row {
+            align-items: flex-start;
+        }
+
+        .hero-banner .col-lg-5.align-self-center {
+            align-self: flex-start !important;
+        }
+
+        .hero-banner .hero-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: auto;
+            padding-top: 28px;
+            align-items: center;
+        }
+
+        .hero-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 260px;
+            min-height: 72px;
+            padding: 16px 24px;
+            border-radius: 8px;
+            color: #fff;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 1;
+            text-decoration: none;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+            text-align: center;
+        }
+
+        .hero-cta-btn:hover {
+            color: #fff;
+            opacity: 0.92;
+            transform: translateY(-1px);
+        }
+
+        .hero-cta-orange {
+            background: #ff6600;
+        }
+
+        .hero-cta-brown {
+            background: #7a4b2b;
+        }
+
+        .hero-cta-blue {
+            background: #1f5f9b;
+        }
+
+        .hero-banner .hero-content {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: min(62vw, 700px);
+        }
+
+        .hero-banner .hero-content h2 {
+            margin-top: 0;
+        }
+
+        .hero-banner .shape {
+            top: var(--hero-top-align) !important;
+        }
+
+        @media (max-width: 991px) {
+            .hero-banner .hero-content {
+                margin-top: 0;
+                min-height: auto;
+            }
+
+            .hero-banner .shape {
+                top: 295px !important;
+            }
+
+            .hero-banner {
+                padding-top: 0;
+            }
+
+            .hero-cta-btn {
+                min-width: 100%;
+                min-height: 62px;
+                font-size: 28px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!--star preloader-->
-    <div class="preloader">
-        <div class="d-table">
-            <div class="d-table-cell align-middle">
-                <div class="loader-wrap">
-                    <div class="loader-ring"></div>
-                    <div class="loader-dot"></div>
-                    <p>Loading Dylan Cornelius</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end preloader-->
-    <div class="sidebar-wrap">
-        <div class="sidebar-inner">
-            <div class="sidebar-close">
-                <div class="sidebar-close-btn">
-                    <i class="fa fa-times"></i>
-                </div>
-            </div>
-            <div class="sidebar-content">
-                <div class="sidebar-logo">
-                    <a href="index.html">
-                        <img class="img-fluid" src="assets/images/logo.png" alt="logo.png">
-                    </a>
-                </div>
-                <div class="mobile-menu"></div>
-                <div class="search-form">
-                    <input type="text" placeholder="Search Courses" class="form-control">
-                    <span><i class="fa fa-search"></i></span>
-                </div>
-                <div class="contact-info">
-                    <ul>
-                        <li><i class="fa fa-envelope"></i> example@gmail.com</li>
-                        <li><i class="fas fa-phone-alt"></i> +98 012345 6789</li>
-                    </ul>
-                </div>
-                <div class="social-icon">
-                    <ul>
-                        <li><span>Follow Us:</span></li>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
-    </div>
     <!-- start header-top-area -->
     <header class="header-area">
         <!--start header-btm-area-->
@@ -134,23 +205,14 @@
             <div class="row">
                 <div class="col-lg-5 col-xl-6 col-md-12 order-2 order-lg-1 align-self-center">
                     <div class="hero-content wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="0.1s">
-                        <h2>Land the Job<br>and the Salary<br><span>You Actually Deserve.</span></h2>
+                        <h2>Ready for work that <span>works?</span></h2>
                         <div class="serarch_input">
                             <p class="hero-microcopy">Free · 30 minutes · No pitch · Trusted since 2016</p>
                         </div>
-                         <div class="hero-counter">
-                            <div class="counter-single wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.25s">
-                                <h2><span class="counter">7</span>x</h2>
-                                <p>More offers with a targeted strategy</p>
-                            </div>
-                            <div class="counter-single wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.35s">
-                                <h2><span class="counter">40</span>%</h2>
-                                <p>Salary increase with the right coach</p>
-                            </div>
-                            <div class="counter-single stat-three wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.45s">
-                                <h2><span class="counter">4</span> wks</h2>
-                                <p>From stuck to offers</p>
-                            </div>
+                         <div class="hero-cta-group wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.25s">
+                            <a href="#" class="hero-cta-btn hero-cta-orange">Are you ready for a smarter next move?</a>
+                            <a href="seekers/" class="hero-cta-btn hero-cta-brown">What work actually suits you?</a>
+                            <a href="#" class="hero-cta-btn hero-cta-blue">Need stable work fast?</a>
                          </div>
                     </div>
                 </div>
@@ -162,544 +224,6 @@
             </div>
         </div>
     </section>
-    <!-- =======================about-us area====================== -->
-    <section id="about" class="about-section section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-8">
-                    <div class="img-wrapper about-img-wrap titlt">
-                        <img class="about-img-1 img-fluid" src="assets/images/about/video-placeholder-square.svg" alt="video placeholder">
-                    </div>
-                </div>
-                <div class="col-xl-6 ">
-                    <div class="section-title section-title2 text-start">
-                        <h2><span>About Dylan</span></h2>
-                        <h4>
-                            Certified Career Coach. <br/>Austin, Texas & Beyond
-                        </h4>
-                    </div><!-- .section-title -->
-                    <p>
-                        Dylan Cornelius is a certified Strategic Intervention coach who has helped hundreds of professionals find clarity, build a targeted job search strategy, and land roles & salaries they actually want.
-                    </p>
-                    <p>
-                        He's not a recruiter. He works for you on strategy, positioning, mindset, and negotiation. His clients regularly land multiple competing offers and negotiate salaries they wouldn't have attempted alone.
-                    </p>
-                    <div class="personal-details row">
-                        <div class="col-md-6 col-sm-6">
-                            <ul class="personal-info">
-                                <li>
-                                    <h4>Specialty</h4>
-                                    <p>Career Strategy &amp; Job Search</p>
-                                </li>
-                                <li>
-                                    <h4>Clients</h4>
-                                    <p>Mid-career professionals</p>
-                                </li>
-                                <li>
-                                    <h4>Approach</h4>
-                                    <p>1:1 and group coaching</p>
-                                </li>
-                            </ul> <!-- .personal-info -->
-                        </div> <!-- .col-md-6 -->
-                        <div class="col-md-6 col-sm-6">
-                            <ul class="personal-info">
-                                <li>
-                                    <h4>Based In</h4>
-                                    <p>Austin, TX — clients worldwide</p>
-                                </li>
-                                <li>
-                                    <h4>Certified</h4>
-                                    <p>Strategic Intervention Coach</p>
-                                </li>
-                                <li>
-                                    <h4>Availability</h4>
-                                    <p>Currently accepting clients</p>
-                                </li>
-                            </ul> <!-- .personal-info -->
-                        </div> <!-- .col-md-6 -->
-                    </div> <!-- .personal-details -->
-                    <div class="about-info">
-                        <a class="btn-default" href="https://dylancornelius.com/clarity-call">Book Your Free Clarity Call</a>
-                    </div>
-                </div>
-            </div> <!-- .row -->
-        </div> <!-- .container -->
-    </section>
-    <!--service area start-->
-     <section id="services" class="service-area">
-      <!--Services Background-->
-      <div class="service-background hidden-sm hidden-xs">
-        <div class="violate"></div>
-        <div class="dark"></div>
-      </div><!--Background ends-->
-      <div class="container wrapper">
-        <div class="row">
-          <div class="service-contents">
-            <div class="col-md-4  col-sm-12 flot">
-              <div class="section-title section-title2 text-start">
-                    <h2><span  class="text-light text-orange">My Service</span></h2>
-                    <h4>
-                       Delivering beautiful digital products for you
-                    </h4>
-                </div><!-- .section-title -->
-              <p class="service-descrip">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaqueipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            </div>
-            <div class="col-md-6 col-md-offset-2 flot">
-              <div class="service-item">
-                <span class="service-icon"><i class="fas fa-desktop"></i></span>
-                <div class="item-info">
-                    <h3 class="white">Desktop Apps</h3>
-                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <span class="service-icon"><i class="fab fa-app-store"></i></span>
-                <div class="item-info">
-                    <h3 class="white">Web Development</h3>
-                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <span class="service-icon"><i class="fas fa-gamepad"></i></span>
-                <div class="item-info">
-                    <h3 class="white">Mobile Apps</h3>
-                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-                </div>
-              </div>
-              <div class="service-item">
-                <span class="service-icon"><i class="fab fa-uncharted"></i></span>
-                <div class="item-info">
-                    <h3 class="white">Web Design</h3>
-                    <p class="grey">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- testimonial-slider -->
-    <section id="testimonial"  class="testimonial-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="section-title text-center">
-                    <h2><span>TESTIMONIALS</span></h2>
-                    <h4>
-                        Life's too short for bad jobs
-                    </h4>
-                </div><!-- .section-title -->
-            </div>
-            <div class="row pt-60">
-                <div class="testimonial-slider owl-carousel owl-theme">
-                    <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                The first thing I got is more clear about what I have to do... I'm really grateful for this call.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/princess-k.jpg" alt="Princess K.">
-                                </div>
-                                <h4>Princess K. <span>Job Search Strategy</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                     <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                I was looking for some direction, and I found it.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/eric-b.jpg" alt="Eric B.">
-                                </div>
-                                <h4>Eric B. <span>Clarity</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                     <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                Dylan's a great accountability partner. He will challenge your thinking.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/kevin-f.jpg" alt="Kevin F.">
-                                </div>
-                                <h4>Kevin F. <span>Leadership</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                     <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                My appointment provided actionable strategies and a new perspective, resulting in my ideal offer.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/paul-d.jpg" alt="Paul D.">
-                                </div>
-                                <h4>Paul D. <span>Job Search Strategy</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                    <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                What Dylan showed me on a single call was worth thousands of dollars.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/glenn-v.jpg" alt="Glenn V.">
-                                </div>
-                                <h4>Glenn V. <span>Breakthrough</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                    <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                I know what I'm going to do. There’s a clear structure for a path forward.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/karen-w.jpg" alt="Karen W.">
-                                </div>
-                                <h4>Karen W. <span>Confidence</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                    <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                I’m in good hands and you just gave me hope that I can get unstuck.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/carlo-c.jpg" alt="Carlo C.">
-                                </div>
-                                <h4>Carlo C. <span>Career Direction</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                    <div class="item-wrapper ">
-                        <div class="content-wrapper">
-                         <div class="qute">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                           <div class="rating">
-                               <ul>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                                   <li><i class="fas fa-star"></i></li>
-                               </ul>
-                           </div>
-                            <p>
-                                I accepted the offer... everything worked out, including bumps to both RSUs and base salary.
-                            </p>
-                            <div class="quote-author">
-                                <div class="image-block">
-                                    <img class="img-fluid" src="assets/images/testimonial/vivek-s.jpg" alt="Vivek S.">
-                                </div>
-                                <h4>Vivek S. <span>Negotiation</span></h4>
-                            </div>
-                        </div> <!-- .content-wrapper -->
-                    </div> <!-- .item-wrapper -->
-                </div>
-            </div> <!-- .row -->
-        </div> <!-- .container -->
-    </section>
-    <!-- process-area -->
-    <section id="pricing" class="process-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="section-title text-center">
-                    <h2><span>The Program</span></h2>
-                    <h4>Dylan's Process</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="process-grid">
-                        <article class="process-card process-card--hero wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                            <h3>Course</h3>
-                            <p>10+ hours of step-by-step training covering every stage of your job search, from clarity to offers.</p>
-                            <ul>
-                                <li>Foundations and positioning</li>
-                                <li>Resume + LinkedIn optimization</li>
-                                <li>Interview narrative and rehearsal</li>
-                                <li>Offer and salary strategy</li>
-                            </ul>
-                        </article>
-                        <article class="process-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                            <h3>Coaching</h3>
-                            <p>Get direct support from Dylan with real-time feedback on outreach, interviews, and negotiation decisions.</p>
-                            <ul>
-                                <li>1:1 strategic sessions</li>
-                                <li>Accountability and execution support</li>
-                                <li>Personalized playbook updates</li>
-                            </ul>
-                        </article>
-                        <article class="process-card wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                            <h3>Community</h3>
-                            <p>Join a focused network of professionals sharing wins, scripts, and tactics that accelerate outcomes.</p>
-                            <ul>
-                                <li>Peer insight and support</li>
-                                <li>Shared templates and examples</li>
-                                <li>Momentum through group wins</li>
-                            </ul>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--start faq area-->
-    <section id="portfolio" class="faq-area section-padding">
-        <div class="background-overlay bg-1"></div>
-        <div class="container">
-            <div class="row">
-                <div class="section-title section-title2 text-start">
-                    <h2><span>FAQ</span></h2>
-                    <h4>
-                        Frequently Asked Questions
-                    </h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="faq-list">
-                        <details class="faq-item" open>
-                            <summary class="faq-question">
-                                Who is this coaching for?
-                                <span class="faq-icon">−</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>Mid-career professionals, tech talent, and executives who want a faster, more strategic job search and stronger offers.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                What happens on the free clarity call?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>We review your current situation, identify the biggest bottlenecks, and map your highest-leverage next steps so you leave with a clear plan.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                How is this different from a recruiter?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>Recruiters work for employers. Dylan works for you on strategy, positioning, interview narrative, and salary negotiation.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                Do you help with resume, LinkedIn, and interviews?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>Yes. Coaching includes targeted positioning, messaging updates, interview prep, and offer negotiation support.</p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="faq-list">
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                How quickly do clients see results?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>Most clients gain clarity and momentum within the first two weeks, with stronger interview pipelines soon after execution starts.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                Do you offer 1:1 and group coaching?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>Yes. Programs include both private coaching and group formats depending on your goals, timeline, and support preference.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                Is this only for people in Austin?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>No. Dylan is based in Austin, TX and works with clients remotely across the U.S. and internationally.</p>
-                            </div>
-                        </details>
-                        <details class="faq-item">
-                            <summary class="faq-question">
-                                How do I get started?
-                                <span class="faq-icon">+</span>
-                            </summary>
-                            <div class="faq-answer">
-                                <p>Book a free clarity call, share your goals, and we’ll decide together on the fastest path and right level of support.</p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--end faq area-->
-    <!-- conversion cta -->
-    <section id="blog" class="cta-panel-area section-padding">
-        <div class="container">
-            <div class="cta-panel-card">
-                <h2>Become The Candidate Employers Fight Over.</h2>
-                <p>
-                    If you're ready to stop guessing and follow a proven strategy, book a free clarity call and map out your fastest path to stronger offers.
-                </p>
-                <a class="cta-panel-btn" href="https://dylancornelius.com/schedule-clarity-call/">Book Your Free Clarity Call</a>
-            </div>
-        </div>
-    </section>
-     <!-- ========== Footer ========== -->
-     <footer class="footer-area">
-         <div class="container">
-             <div class="row footer-layout-v2 align-items-start">
-                 <div class="col-lg-5">
-                     <div class="ft-single footer-brand-col">
-                         <div class="ft-logo">
-                             <img src="assets/images/brand/dylan-logo-150.svg" alt="Dylan logo">
-                         </div>
-                         <p class="footer-brand-copy">Career coaching for tech professionals and executives.</p>
-                         <div class="ft-social">
-                             <ul>
-                                 <li><a href="https://www.facebook.com/CareerAccelerationAcademy/"><i class="fab fa-facebook-f"></i></a></li>
-                                 <li><a href="https://www.linkedin.com/in/dylancornelius/"><i class="fab fa-linkedin-in"></i></a></li>
-                                 <li><a href="https://x.com/DylanCornelius"><i class="fab fa-twitter"></i></a></li>
-                                 <li><a href="https://www.instagram.com/getyourbestjob/"><i class="fab fa-instagram"></i></a></li>
-                             </ul>
-                         </div>
-                     </div>
-                 </div>
-                 <div class="col-lg-7">
-                     <div class="ft-single footer-info-col">
-                         <div class="ft-title">
-                             <h4 class="footer-kicker">Contact Us</h4>
-                         </div>
-                         <div class="col-contact">
-                            <p><strong>T</strong> : (512) 866-7789</p>
-                            <p class="over-hidden mt-10">
-                                <strong>E</strong> : <a class="link-hover" href="#" data-hover-text="info@dylancornelius.com">info@dylancornelius.com</a>
-                            </p>
-                         </div>
-                         <div class="secure-payments">
-                            <img src="assets/images/testimonial/payments.png" alt="Secure checkout payment methods">
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-bottom">
-                     <p>© Copyright 2026. Dylan Cornelius</p>
-                    </div>
-                </div>
-             </div>
-         </div>
-     </footer>
-      <!--scroll-->
-    <div class="scroll-area">
-       <i class="fa fa-angle-up"></i>
-    </div>
-    
     <!--jQuery js-->
     <script src="assets/js/jquery-3.6.4.min.js"></script>
     <!--proper js-->
