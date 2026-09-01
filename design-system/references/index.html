@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DCMLLC Design System — Approved References</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--dc-font-sans); color: var(--dc-color-text); background: var(--dc-color-bg-light); line-height: var(--dc-line-height-body); }
+    main { max-width: var(--dc-content-wide); margin: 0 auto; padding: var(--dc-space-8) var(--dc-space-5); }
+    h1,h2,h3 { color: var(--dc-color-heading); }
+    h1 { font-size: var(--dc-font-size-h1); line-height: var(--dc-line-height-display); margin: 0 0 var(--dc-space-4); }
+    h2 { font-size: var(--dc-font-size-h2); margin: var(--dc-space-8) 0 var(--dc-space-5); }
+    h3 { margin: 0 0 var(--dc-space-2); }
+    p { margin-top: 0; }
+    .eyebrow { color: var(--dc-color-orange); font-size: var(--dc-font-size-xs); font-weight: 700; text-transform: uppercase; letter-spacing: var(--dc-letter-spacing-eyebrow); }
+    .intro { max-width: var(--dc-reading-measure); }
+    .grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--dc-space-5); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: var(--dc-space-5); }
+    .card { background: var(--dc-color-white); border: var(--dc-border-default); border-radius: var(--dc-radius-md); padding: var(--dc-space-5); box-shadow: var(--dc-shadow-sm); }
+    .media { width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: center top; border-radius: var(--dc-radius-sm); background: var(--dc-color-soft-blue); display: block; margin-bottom: var(--dc-space-4); }
+    .media--logo { object-fit: contain; padding: var(--dc-space-5); background: var(--dc-color-white); }
+    .avatar { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: center top; display: block; margin-bottom: var(--dc-space-4); }
+    .status { display: inline-block; font-size: var(--dc-font-size-xs); font-weight: 700; padding: 4px 8px; border-radius: 999px; background: var(--dc-color-soft-blue); color: var(--dc-color-navy); margin-bottom: var(--dc-space-3); }
+    .external { overflow-wrap: anywhere; font-size: var(--dc-font-size-sm); }
+    .dark { background: var(--dc-color-navy); color: var(--dc-color-white); border-radius: var(--dc-radius-lg); padding: var(--dc-space-6); margin-top: var(--dc-space-8); }
+    .dark h2, .dark p { color: var(--dc-color-white); }
+    a { color: var(--dc-color-link); text-decoration: underline; }
+    a:hover { color: var(--dc-color-link-hover); }
+    @media (max-width: 900px) { .grid,.grid-2 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { main { padding: var(--dc-space-6) var(--dc-space-4); } .grid,.grid-2 { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Milestone 5 · Canonical References</p>
+  <h1>Approved visual reference library</h1>
+  <p class="intro">Use this page to understand which images are approved precedent and what role each one plays. Detailed governance lives in <a href="README.md">references/README.md</a>. Images elsewhere in the repository are not automatically approved.</p>
+
+  <h2>Brand mark</h2>
+  <div class="grid-2">
+    <article class="card">
+      <span class="status">Canonical</span>
+      <img class="media media--logo" src="../../assets/images/brand/dylan-logo-150.svg" alt="Canonical Dylan Cornelius logo">
+      <h3>Current official logo</h3>
+      <p>Use until Dylan explicitly approves a clean vector replacement. Do not redraw or substitute.</p>
+    </article>
+  </div>
+
+  <h2>Dylan portrait sources</h2>
+  <div class="grid-2">
+    <article class="card">
+      <span class="status">Approved source</span>
+      <img class="media" src="../../assets/images/pics/dylan-main-01.jpg" alt="Approved Dylan Cornelius portrait source">
+      <h3>Repository portrait source 01</h3>
+      <p>Approved portrait pool. Use deliberate crop and natural skin tone.</p>
+    </article>
+    <article class="card">
+      <span class="status">Approved source</span>
+      <img class="media" src="../../assets/images/pics/dylan-main-02.jpg" alt="Approved Dylan Cornelius portrait source">
+      <h3>Repository portrait source 02</h3>
+      <p>Approved portrait pool. Use the crop that best fits the component contract.</p>
+    </article>
+  </div>
+
+  <div class="grid-2" style="margin-top:24px;">
+    <article class="card">
+      <span class="status">Primary production precedent</span>
+      <h3>Tight hero/headshot</h3>
+      <p>Primary production reference for heroes, featured images, compact About blocks, and recognizable face-led assets.</p>
+      <p class="external"><a href="https://dylancornelius.com/wp-content/uploads/2026/02/20170206_dylan_0162_web-square-close-up-2.jpeg">Production source</a></p>
+      <p>Crop the known white keyline artifact from bottom/right before compositing on color.</p>
+    </article>
+    <article class="card">
+      <span class="status">Contextual production precedent</span>
+      <h3>Professional environmental portrait</h3>
+      <p>Use for biography, authority, career-transition, or “why Dylan” contexts when environment contributes meaning.</p>
+      <p class="external"><a href="https://dylancornelius.com/wp-content/uploads/2026/06/IMG_2116-1-scaled.jpeg">Production source</a></p>
+    </article>
+  </div>
+
+  <h2>Client proof portraits</h2>
+  <div class="grid">
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/omario-k.jpg" alt="Omario K."><h3>Omario K.</h3><p>Use only with Omario's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/vivek-s.jpg" alt="Vivek S."><h3>Vivek S.</h3><p>Use only with Vivek's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/eric-b.jpg" alt="Eric B."><h3>Eric B.</h3><p>Use only with Eric's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/karen-w.jpg" alt="Karen W."><h3>Karen W.</h3><p>Use only with Karen's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/george-m.jpg" alt="George M."><h3>George M.</h3><p>Use only with George's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/ayeesha-k.jpg" alt="Ayeesha K."><h3>Ayeesha K.</h3><p>Use only with Ayeesha's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/carlo-c.jpg" alt="Carlo C."><h3>Carlo C.</h3><p>Use only with Carlo's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/paul-d.jpg" alt="Paul D."><h3>Paul D.</h3><p>Use only with Paul's verified testimonial/proof.</p></article>
+    <article class="card"><img class="avatar" src="../../assets/images/testimonial/jim-l.jpg" alt="Jim L."><h3>Jim L.</h3><p>Use only with Jim's verified testimonial/proof.</p></article>
+  </div>
+
+  <h2>Approved categories not yet mirrored</h2>
+  <div class="grid-2">
+    <article class="card"><span class="status">Approved category</span><h3>Big Bend / tandem-bike</h3><p>Origin-story, endurance, adventure, and lived-experience contexts. Source is approved but not currently mirrored into this repository. Do not substitute stock cycling imagery.</p></article>
+    <article class="card"><span class="status">Approved category</span><h3>Speaker / office batch IMG_5754–5768</h3><p>Use only the strongest 2–3 frames for speaking/office authority. These are contextual, not default headshots.</p></article>
+  </div>
+
+  <section class="dark">
+    <p class="eyebrow">Reference discipline</p>
+    <h2>Existing does not mean approved.</h2>
+    <p>Template shapes, generic project imagery, unnamed brand PNGs, and placeholder blog graphics remain historical evidence. New work should start from the references on this page, the component catalog, and the applicable delivery scheme.</p>
+  </section>
+</main>
+</body>
+</html>
