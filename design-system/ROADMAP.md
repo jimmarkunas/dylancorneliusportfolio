@@ -2,7 +2,7 @@
 
 ## Refined six-milestone plan
 
-The original six-step roadmap is retained, but the boundaries are clarified so brand invariants, reusable components, and channel-specific delivery schemes do not drift into one another.
+The original six-step roadmap is retained, with brand invariants, reusable components, and channel-specific delivery schemes kept separate so they do not drift into one another.
 
 ---
 
@@ -61,51 +61,58 @@ Completed:
 
 ---
 
-## Milestone 4 — Component & Page Pattern System 🔶 CURRENT
+## Milestone 4 — Component & Page Pattern System ✅
 
-**Goal:** turn primitive rules into reusable, visual, executable patterns that Claude and ChatGPT can copy without inventing new styling.
+**Goal:** turn primitive rules into reusable, visual, executable patterns that Claude and ChatGPT can reuse without inventing new styling.
 
-Required component catalog:
+Completed component contracts:
 - typography hierarchy
-- primary orange CTA
+- primary Orange CTA
 - secondary Navy button
 - Navy outline button
 - Teal secondary button
 - inline text links
-- content cards
+- standard / feature / dark cards
 - testimonial/proof cards
 - process/framework blocks
 - case-study/result layouts
-- guarantee component/stamp treatment
-- navigation + active states
+- guarantee/risk-reversal treatment
+- desktop navigation + active states
 - mobile navigation principles
 - form fields, labels, help text, validation/error states
-- dark section treatment
+- dark-section treatment
 - image/portrait treatments
-- icon treatment/system
+- icon system
+- conversion hero
 
-Required page patterns:
-- sales page sequence: Hero → Problem → Solution → Social Proof → Guarantee → CTA
-- article/post CTA placement pattern
-- simple conversion section
-- proof/testimonial band
+Completed page patterns:
+- Hero → Problem → Solution → Social Proof → Guarantee → CTA sales-page sequence
+- Problem, Solution, Social Proof, Guarantee, and conversion CTA section contracts
+- article/post CTA hierarchy
+- proof/testimonial bands
 
-Responsive behavior should be specified at the component level as components are approved.
+Completed behavior/governance:
+- wide / compact / small-mobile responsive guidance
+- component accessibility baseline
+- component change-control process
+- separation between invariant component contracts and channel delivery schemes
 
-**Primary artifact:**
-- `components.html`
+**Primary artifacts:**
+- `COMPONENTS.md` — canonical component contracts
+- `components.html` — canonical visual implementation reference
 
-**Completion test:** a human, Claude, or ChatGPT can open one ordinary HTML file and visually understand the approved component grammar without reading legacy portfolio CSS.
+**Completion test:** a human, Claude, or ChatGPT can understand both the behavioral contract and visual grammar without reading legacy portfolio CSS.
 
 ---
 
-## Milestone 5 — Channel Schemes & Approved Reference Library
+## Milestone 5 — Channel Schemes & Approved Reference Library 🔶 CURRENT
 
 **Goal:** pair the design system with channel-specific execution rules and approved visual precedent.
 
-Already started:
+Already implemented:
 - Elementor/WordPress delivery scheme
 - Gutenberg scheme
+- Elementor blank-canvas scheme
 - featured-image 1200×628 scheme
 - WordPress post-content and five-file delivery schemes
 - scheduling-link routing
@@ -115,6 +122,7 @@ Still required:
 - approved reference-image library
 - canonical headshot/reference crops
 - strongest approved photography examples by use case
+- reference mapping from components to approved imagery where useful
 - true vector logo task or source-master identification
 - Skool cover-image scheme
 - Skool post-header scheme
@@ -125,7 +133,7 @@ Still required:
 - `SCHEMES.md`
 - `references/`
 
-**Completion test:** channel differences are explicit and no AI needs to infer whether WordPress, featured-image, Skool, or general-web rules apply.
+**Completion test:** channel differences are explicit and approved visual precedent is available, so no AI needs to infer whether WordPress, featured-image, Skool, general-web, or asset-specific rules apply.
 
 ---
 
@@ -135,7 +143,7 @@ Still required:
 
 Required validation:
 - give Claude and ChatGPT the same representative design tasks
-- compare color, typography, spacing, CTA hierarchy, imagery, copy, and channel handling
+- compare color, typography, spacing, CTA hierarchy, imagery, copy, component choice, and channel handling
 - identify any ambiguous rule that produces materially different output
 - tighten rules only where ambiguity causes real drift
 
@@ -155,10 +163,10 @@ Suggested representative tests:
 6. Elementor dark section
 7. Skool asset after its scheme is defined
 
-**Completion test:** independent agents produce materially consistent branded output and can explain which canonical rule or scheme drove each major choice.
+**Completion test:** independent agents produce materially consistent branded output and can explain which canonical rule, component contract, reference, or scheme drove each major choice.
 
 ---
 
 # Current one-line roadmap
 
-**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → 🔶 M4 Components & Page Patterns → M5 Schemes & References → M6 Validation/Migration/Drift Control**
+**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → 🔶 M5 Schemes & References → M6 Validation/Migration/Drift Control**
