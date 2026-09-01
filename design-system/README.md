@@ -1,20 +1,21 @@
 # Dylan Cornelius Design System
 
 ## Status
-Milestones 1–5 are complete and reconciled with the production-tested Claude project rules supplied September 1, 2026. **Milestone 6 — Cross-Agent Validation, Migration & Drift Control — is now current.**
+Milestones 1–5 are complete. **Milestone 6 — Cross-Agent Validation, Migration & Drift Control — is operationalized.** The repository/static baseline passes; empirical Claude-vs-ChatGPT certification remains pending the first paired seven-test run.
 
 ## Purpose
 This directory is the canonical design-system authority for Dylan Cornelius / DCMLLC branded web pages and graphical assets.
 
-The system deliberately separates five layers:
+The system deliberately separates six layers:
 
 1. **Brand invariants** — `BRAND.md`
 2. **Design primitives** — `tokens.css`
 3. **Reusable component/page-pattern contracts** — `COMPONENTS.md` + `components.html`
 4. **Channel-specific delivery schemes** — `SCHEMES.md`
 5. **Approved visual precedent** — `references/README.md` + `references/index.html`
+6. **Validation, exceptions, and legacy convergence** — `VALIDATION.md`, `EXCEPTIONS.md`, `MIGRATION.md`, `validation/`
 
-This keeps production constraints from mutating the brand, prevents legacy imagery from becoming accidental precedent, and gives Claude/ChatGPT the same executable visual grammar.
+This structure prevents platform mechanics, legacy implementation, one-off exceptions, or agent-specific prompts from silently mutating the brand.
 
 ## Authority and precedence
 
@@ -25,20 +26,25 @@ This keeps production constraints from mutating the brand, prevents legacy image
 5. **Existing Figma concepts and historical brand materials**
 6. **AI inference or newly invented styling**
 
-The September 1, 2026 production-tested Claude brief has been incorporated into the canonical files. Where the previous Milestone 3 baseline conflicted, the production-tested rules won.
+The September 1, 2026 production-tested Claude brief has been incorporated into the canonical files. Where the earlier Milestone 3 baseline conflicted, the production-tested rules won.
 
 ## Canonical files
 
 - `README.md` — governance and current status
-- `ROADMAP.md` — refined six-milestone roadmap
-- `AUDIT.md` — historical evidence, conflicts, and legacy/template residue; **not canonical styling**
-- `BRAND.md` — canonical invariant brand, visual, imagery, and design-affecting copy rules
-- `tokens.css` — canonical machine-readable design values
-- `COMPONENTS.md` — canonical component/page-pattern contracts, responsive behavior, accessibility, and usage rules
-- `components.html` — canonical visual implementation reference for reusable components and page patterns
-- `SCHEMES.md` — canonical channel-specific delivery rules for Elementor, Gutenberg, featured images, WordPress posts, Skool, scheduling routing, and cross-channel reuse
-- `references/README.md` — canonical reference-asset hierarchy, usage rules, and legacy-image quarantine
-- `references/index.html` — visual gallery of approved, addressable reference assets
+- `ROADMAP.md` — six-milestone roadmap
+- `AUDIT.md` — historical evidence and legacy/template residue; **not canonical styling**
+- `BRAND.md` — invariant brand, visual, imagery, and design-affecting copy rules
+- `tokens.css` — machine-readable design values
+- `COMPONENTS.md` — component/page-pattern contracts, responsive behavior, accessibility, and usage rules
+- `components.html` — canonical visual implementation reference
+- `SCHEMES.md` — channel-specific delivery rules for Elementor, Gutenberg, featured images, WordPress, Skool, scheduling routing, and cross-channel reuse
+- `references/README.md` — approved reference hierarchy and legacy-image quarantine
+- `references/index.html` — visual gallery of approved, addressable references
+- `VALIDATION.md` — cross-agent scoring, static conformance, drift-resolution rules, and certification gate
+- `validation/AGENT-TEST-PACK.md` — seven identical Claude/ChatGPT validation briefs
+- `validation/SCORECARD.md` — shared scoring/certification template
+- `EXCEPTIONS.md` — canonical registry of intentional non-global deviations
+- `MIGRATION.md` — controlled legacy-convergence policy and migration ledger
 
 ## Key reconciled decisions
 
@@ -54,10 +60,10 @@ The September 1, 2026 production-tested Claude brief has been incorporated into 
 - Primary CTA: Orange fill + White text
 - Canonical logo: `assets/images/brand/dylan-logo-150.svg` until Dylan explicitly approves a true vector replacement
 - WordPress featured-image master: 1200×628 with crop-safe essential-message zone
-- Skool group-cover master: DCMLLC-owned 16:9 / 1600×900 production standard with central safe zone
-- Skool post-header master: 1200×675 / 16:9 when a distinct Skool asset is actually needed
+- Skool group-cover master: DCMLLC-owned 16:9 / 1600×900 production standard
+- Skool post-header master: 1200×675 / 16:9 when a distinct Skool asset is justified
 
-Retired values such as `#EA5116`, `#1E3A5F`, and `#2C2C55` must not appear in new work.
+Retired values such as `#EA5116`, `#1E3A5F`, and `#2C2C55` must not appear in new active work.
 
 ## AI usage
 
@@ -66,28 +72,34 @@ Before producing or modifying branded work:
 1. Read this README.
 2. Read `BRAND.md`.
 3. Read/use `tokens.css`.
-4. Read `COMPONENTS.md` for component anatomy, variants, responsive behavior, and accessibility rules.
-5. Use `components.html` as the visual implementation precedent.
-6. Read `references/README.md` and use `references/index.html` when selecting imagery, logo treatment, client proof, or visual precedent.
-7. If the deliverable is channel-specific, read the matching rules in `SCHEMES.md`.
-8. Use `AUDIT.md` only for history/evidence; never let it override current canonical rules.
-9. Use `ROADMAP.md` to understand what is complete versus still being validated.
+4. Read `COMPONENTS.md`; use `components.html` as visual precedent.
+5. Read `references/README.md` / `references/index.html` before selecting imagery or proof.
+6. Read the applicable channel rules in `SCHEMES.md`.
+7. Read `EXCEPTIONS.md` before intentionally deviating from a canonical rule.
+8. Read `MIGRATION.md` when touching legacy portfolio implementation.
+9. Follow `VALIDATION.md` when changing the design system or running cross-agent validation.
+10. Use `AUDIT.md` only for history/evidence.
 
-If a component need is already covered by `COMPONENTS.md`, reuse it before inventing a new pattern. If imagery is already mapped in `references/README.md`, use that hierarchy before browsing arbitrary repository assets. When a new requirement conflicts with canonical rules, follow Dylan's explicit current instruction and update the canonical files if the change is intended to persist.
+If a component or reference already exists, reuse it before inventing a new pattern. If production experience exposes a recurring problem, update the smallest appropriate canonical layer rather than patching Claude and ChatGPT independently.
 
 ## Change control
 
-- system changes are intentional and reviewable in Git history
-- one-off exceptions remain exceptions unless explicitly promoted
-- do not silently average conflicting rules
-- do not copy arbitrary legacy CSS into new components
-- do not treat every image in `/assets/images/` as approved reference material
-- migrate legacy pages deliberately when they are touched
-- when production experience reveals a component problem, update `COMPONENTS.md` and `components.html` together
-- channel-only differences belong in `SCHEMES.md`, not in global tokens
+- meaningful system changes are reviewable in Git history
+- one-off deviations belong in `EXCEPTIONS.md`, not global tokens
+- repeated exceptions should trigger review of the underlying canonical rule
+- legacy pages migrate deliberately when touched; no automatic global redesign
+- component changes update `COMPONENTS.md` and `components.html` together
+- channel-only differences belong in `SCHEMES.md`
 - reference changes belong in `references/README.md` and `references/index.html`
-- avoid duplicating canonical prose across `AGENTS.md` and `CLAUDE.md`; those files only point agents here
+- material system changes rerun the affected validation tests
+- agent divergence is corrected in the shared design system, not in separate hidden prompt rules
+
+## Phase 6 state
+
+Static canonical-system conformance baseline: **PASS — September 1, 2026.**
+
+Cross-agent behavioral certification: **PENDING** until Claude and ChatGPT both complete `validation/AGENT-TEST-PACK.md` and pass `validation/SCORECARD.md` after any required reconciliation.
 
 ## Current one-line roadmap
 
-**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → ✅ M5 Schemes & References → 🔶 M6 Validation/Migration/Drift Control**
+**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → ✅ M5 Schemes & References → ✅ M6 Operationalized / 🔶 Cross-Agent Certification**
