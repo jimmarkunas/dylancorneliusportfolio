@@ -1,58 +1,79 @@
 # Dylan Cornelius Design System
 
 ## Status
-Milestone 3 — Brand Rules & Tokens completed.
-
-Canonical visual rules now live in `BRAND.md`; canonical implementation values live in `tokens.css`. Milestone 4 will turn those primitives into an approved component catalog.
+Milestones 1–3 are complete and reconciled with the production-tested Claude project rules supplied September 1, 2026. **Milestone 4 — Component & Page Pattern System — is now in progress with an initial `components.html` catalog implemented.**
 
 ## Purpose
-This directory is the canonical design-system authority for Dylan Cornelius branded web pages and graphical assets.
+This directory is the canonical design-system authority for Dylan Cornelius / DCMLLC branded web pages and graphical assets.
 
-The system was derived from explicit brand decisions, approved/current branded implementation evidence, the Milestone 2 audit, and the precedence rules below. Legacy implementation details remain evidence, not automatic brand rules.
+The system deliberately separates three layers:
+
+1. **Brand invariants** — `BRAND.md`
+2. **Reusable design primitives/components** — `tokens.css` + `components.html`
+3. **Channel-specific delivery schemes** — `SCHEMES.md`
+
+This keeps production constraints from mutating the underlying brand and keeps brand rules from pretending every platform behaves the same way.
 
 ## Authority and precedence
-When sources conflict, use this order:
 
-1. **Explicit current approval from Dylan Cornelius**
+1. **Explicit current written approval from Dylan Cornelius**
 2. **Canonical files in `/design-system/`**
-3. **Approved reference assets stored in `/design-system/references/`**
-4. **Existing portfolio implementation in this repository**
+3. **Approved reference assets in `/design-system/references/`**
+4. **Existing portfolio implementation**
 5. **Existing Figma concepts and historical brand materials**
 6. **AI inference or newly invented styling**
 
-AI inference must never override an approved or canonical rule.
+The September 1, 2026 production-tested Claude brief has been incorporated into the canonical files. Where the previous Milestone 3 baseline conflicted, the production-tested rules won.
 
-## Governance rules
-- GitHub is the ongoing source of truth for the design system.
-- Figma is a reference and discovery source, not a required runtime dependency.
-- Read `BRAND.md` before making visual decisions.
-- Use `tokens.css` rather than copying arbitrary values from legacy CSS.
-- Do not promote an existing CSS value, component treatment, or Figma treatment into the design system merely because it exists.
-- When canonical rules and legacy implementation disagree, canonical rules govern new work; migrate legacy pages intentionally rather than silently rewriting them.
-- When a new source conflicts with the canonical system, flag the conflict for explicit approval rather than averaging or silently choosing.
-- Canonical rules should be written once and referenced elsewhere rather than duplicated across AI-specific instruction files.
+## Canonical files
 
-## Current design-system files
-- `README.md` — governance, precedence, and project status
-- `AUDIT.md` — Milestone 2 evidence inventory, conflicts, template-residue quarantine, and historical decision queue. **Research evidence, not canonical styling.**
-- `BRAND.md` — **canonical human-readable visual rules and principles**
-- `tokens.css` — **canonical implementation tokens for typography, color, spacing, width, radius, elevation, motion, and core control roles**
+- `README.md` — governance and current status
+- `ROADMAP.md` — refined six-milestone roadmap
+- `AUDIT.md` — historical evidence, conflicts, and legacy/template residue; **not canonical styling**
+- `BRAND.md` — canonical invariant brand, visual, imagery, and design-affecting copy rules
+- `tokens.css` — canonical machine-readable design values
+- `components.html` — working visual catalog of reusable components and page patterns
+- `SCHEMES.md` — canonical channel-specific delivery rules for Elementor, Gutenberg, featured images, WordPress posts, scheduling routing, and future channels
 
-## Planned later milestones
-- `components.html` — approved reusable component and pattern catalog (Milestone 4)
-- `references/` — approved visual references and source assets (Milestone 5)
-- AI/design-system validation and finalization (Milestone 6)
+## Key reconciled decisions
+
+- Brand Orange: `#D9660E`
+- Orange hover/active: `#BE590C`
+- Brand Navy: `#27374D`
+- Brand Teal: `#1A9E8E`
+- Dark surface: Brand Navy `#27374D`
+- Body text: `#4B5563`
+- Muted/caption text: `#6B7280`
+- Web font: Inter only
+- Featured-image headline exception: Bricolage Grotesque Bold
+- Primary CTA: Orange fill + White text
+- Canonical logo: `assets/images/brand/dylan-logo-150.svg` until a true vector master replaces it
+
+Retired M3 values such as `#EA5116`, `#1E3A5F`, and `#2C2C55` must not appear in new work.
 
 ## AI usage
-Before producing or modifying branded assets in this repository:
+
+Before producing or modifying branded work:
 
 1. Read this README.
 2. Read `BRAND.md`.
-3. Use `tokens.css` for primitive design values.
-4. Use `AUDIT.md` only to understand legacy evidence/history; do not use it to override canonical rules.
-5. Once `components.html` and approved references exist, use them as additional required sources.
+3. Read/use `tokens.css`.
+4. Use `components.html` as the visual component precedent.
+5. If the deliverable is channel-specific, read the matching rules in `SCHEMES.md`.
+6. Use `AUDIT.md` only for history/evidence; never let it override current canonical rules.
+7. Use `ROADMAP.md` to understand what is complete versus still being defined.
 
-If a requested treatment conflicts with `BRAND.md` or `tokens.css`, follow the user's explicit current request and record the system change if it is intended to become a new rule.
+When a new requirement conflicts with canonical rules, follow Dylan's explicit current instruction and update the canonical files if the change is intended to persist.
 
 ## Change control
-Changes to canonical design-system rules should be intentional and reviewable in Git history. Silent stylistic drift is not an acceptable update mechanism.
+
+- system changes are intentional and reviewable in Git history
+- one-off exceptions remain exceptions unless explicitly promoted
+- do not silently average conflicting rules
+- do not copy arbitrary legacy CSS into new components
+- migrate legacy pages deliberately when they are touched
+- avoid duplicating canonical prose across `AGENTS.md` and `CLAUDE.md`; those files only point agents here
+
+## Current one-line roadmap
+
+**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → 🔶 M4 Components & Page Patterns → M5 Schemes & References → M6 Validation/Migration/Drift Control**
