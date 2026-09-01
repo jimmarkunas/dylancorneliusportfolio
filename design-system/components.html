@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DCMLLC Design System — Component Catalog</title>
+  <link rel="stylesheet" href="tokens.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--dc-font-sans);
+      color: var(--dc-color-text);
+      background: var(--dc-color-page);
+      line-height: var(--dc-line-height-body);
+    }
+    a { color: var(--dc-color-link); }
+    a:hover { color: var(--dc-color-link-hover); }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: none;
+      box-shadow: var(--dc-focus-ring);
+    }
+    img { max-width: 100%; height: auto; }
+
+    .ds-shell { max-width: var(--dc-content-wide); margin: 0 auto; padding: var(--dc-space-6) var(--dc-space-5) var(--dc-space-9); }
+    .ds-header { padding: var(--dc-space-7) 0 var(--dc-space-8); border-bottom: var(--dc-border-default); margin-bottom: var(--dc-space-8); }
+    .ds-header h1 { margin: 0 0 var(--dc-space-4); font-size: var(--dc-font-size-h1); line-height: var(--dc-line-height-display); color: var(--dc-color-heading); }
+    .ds-header p { max-width: var(--dc-reading-measure); margin: 0; }
+    .ds-kicker, .eyebrow { display: inline-block; margin: 0 0 var(--dc-space-3); color: var(--dc-color-orange); font-size: var(--dc-font-size-xs); font-weight: 700; text-transform: uppercase; letter-spacing: var(--dc-letter-spacing-eyebrow); }
+    .ds-section { padding: var(--dc-space-8) 0; border-bottom: var(--dc-border-default); }
+    .ds-section:last-child { border-bottom: 0; }
+    .ds-section h2 { margin: 0 0 var(--dc-space-5); font-size: var(--dc-font-size-h2); line-height: var(--dc-line-height-heading); color: var(--dc-color-heading); }
+    .ds-section h3 { margin-top: 0; color: var(--dc-color-heading); }
+    .ds-note { max-width: var(--dc-reading-measure); color: var(--dc-color-caption); }
+    .ds-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dc-space-5); }
+    .ds-grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dc-space-6); }
+    .ds-stack { display: grid; gap: var(--dc-space-5); }
+    .ds-demo { padding: var(--dc-space-6); border: var(--dc-border-default); border-radius: var(--dc-radius-md); background: var(--dc-color-surface-light); }
+
+    h1, h2, h3, h4, h5, h6 { color: var(--dc-color-heading); }
+    h1 { font-size: var(--dc-font-size-h1); line-height: var(--dc-line-height-display); }
+    h2 { font-size: var(--dc-font-size-h2); line-height: var(--dc-line-height-heading); }
+    h3 { font-size: var(--dc-font-size-h3); line-height: var(--dc-line-height-heading); }
+    h4 { font-size: var(--dc-font-size-h4); line-height: var(--dc-line-height-heading); }
+    h5 { font-size: var(--dc-font-size-h5); }
+    h6 { font-size: var(--dc-font-size-h6); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: var(--dc-control-min-height);
+      padding: var(--dc-space-3) var(--dc-space-5);
+      border-radius: var(--dc-radius-sm);
+      border: var(--dc-border-width) solid transparent;
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background var(--dc-duration-base) var(--dc-ease-standard), color var(--dc-duration-base) var(--dc-ease-standard), border-color var(--dc-duration-base) var(--dc-ease-standard), transform var(--dc-duration-base) var(--dc-ease-standard);
+    }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+    .btn-primary { background: var(--dc-button-primary-bg); color: var(--dc-button-primary-text); border-color: var(--dc-button-primary-border); }
+    .btn-primary:hover { background: var(--dc-button-primary-hover-bg); color: var(--dc-button-primary-text); border-color: var(--dc-button-primary-hover-border); }
+    .btn-secondary { background: var(--dc-button-secondary-bg); color: var(--dc-button-secondary-text); border-color: var(--dc-button-secondary-border); }
+    .btn-secondary:hover { color: var(--dc-color-white); }
+    .btn-outline { background: var(--dc-button-outline-bg); color: var(--dc-button-outline-text); border-color: var(--dc-button-outline-border); }
+    .btn-outline:hover { background: var(--dc-color-navy); color: var(--dc-color-white); }
+    .btn-teal { background: var(--dc-button-teal-bg); color: var(--dc-button-teal-text); border-color: var(--dc-button-teal-border); }
+    .btn-teal:hover { color: var(--dc-color-white); filter: brightness(.93); }
+    .button-row { display: flex; gap: var(--dc-space-3); flex-wrap: wrap; }
+
+    .inline-link { color: var(--dc-color-link); text-decoration: underline; text-underline-offset: .14em; }
+    .inline-link:hover { color: var(--dc-color-link-hover); }
+
+    .card { background: var(--dc-card-bg); border: var(--dc-card-border); border-radius: var(--dc-card-radius); padding: var(--dc-card-padding); box-shadow: var(--dc-shadow-sm); }
+    .card p:last-child { margin-bottom: 0; }
+    .card--feature { border-radius: var(--dc-radius-lg); }
+    .card--dark { background: var(--dc-color-navy); color: var(--dc-color-white); border-color: var(--dc-color-navy); }
+    .card--dark h3, .card--dark p { color: var(--dc-color-white); }
+
+    .testimonial { display: grid; grid-template-columns: 64px 1fr; gap: var(--dc-space-4); align-items: start; }
+    .avatar { width: 64px; height: 64px; border-radius: var(--dc-radius-circle); background: var(--dc-color-soft-blue); display: grid; place-items: center; color: var(--dc-color-navy); font-weight: 700; }
+    .quote { margin: 0 0 var(--dc-space-3); font-size: var(--dc-font-size-lg); line-height: var(--dc-line-height-tight-ui); color: var(--dc-color-heading); }
+    .attribution { margin: 0; color: var(--dc-color-caption); font-size: var(--dc-font-size-sm); }
+
+    .process { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--dc-space-4); }
+    .process-step { position: relative; padding: var(--dc-space-5); border: var(--dc-border-default); border-radius: var(--dc-radius-md); background: var(--dc-color-white); }
+    .process-number { width: 34px; height: 34px; display: grid; place-items: center; border-radius: var(--dc-radius-circle); background: var(--dc-color-orange); color: var(--dc-color-white); font-weight: 700; margin-bottom: var(--dc-space-3); }
+
+    .result-layout { display: grid; grid-template-columns: 1fr auto; gap: var(--dc-space-5); align-items: center; }
+    .result-number { font-size: var(--dc-font-size-h3); line-height: 1; color: var(--dc-color-success); font-weight: 700; white-space: nowrap; }
+
+    .guarantee { display: grid; grid-template-columns: 96px 1fr; gap: var(--dc-space-5); align-items: center; border: 2px solid var(--dc-color-orange); border-radius: var(--dc-radius-lg); padding: var(--dc-space-6); background: var(--dc-color-white); }
+    .guarantee-mark { width: 96px; aspect-ratio: 1; border-radius: var(--dc-radius-circle); border: 4px double var(--dc-color-orange); display: grid; place-items: center; text-align: center; color: var(--dc-color-orange); font-weight: 700; font-size: var(--dc-font-size-sm); line-height: 1.15; text-transform: uppercase; letter-spacing: .06em; }
+
+    .nav-demo { display: flex; align-items: center; justify-content: space-between; gap: var(--dc-space-5); padding: var(--dc-space-4) var(--dc-space-5); background: var(--dc-color-white); border: var(--dc-border-default); border-radius: var(--dc-radius-md); }
+    .brand-lockup { display: flex; align-items: center; gap: var(--dc-space-3); font-weight: 700; color: var(--dc-color-navy); text-decoration: none; }
+    .brand-lockup img { width: 41px; height: 60px; object-fit: contain; }
+    .nav-links { display: flex; gap: var(--dc-space-5); align-items: center; }
+    .nav-links a { color: var(--dc-color-navy); text-decoration: none; font-weight: 600; }
+    .nav-links a[aria-current="page"] { color: var(--dc-color-orange); }
+
+    .form-grid { display: grid; gap: var(--dc-space-4); }
+    .field { display: grid; gap: var(--dc-space-2); }
+    .field label { color: var(--dc-color-heading); font-weight: 600; }
+    .field input, .field textarea, .field select { width: 100%; min-height: var(--dc-control-min-height); padding: var(--dc-space-3) var(--dc-space-4); border: var(--dc-border-default); border-radius: var(--dc-radius-sm); font: inherit; color: var(--dc-color-text); background: var(--dc-color-white); }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .help { color: var(--dc-color-caption); font-size: var(--dc-font-size-sm); }
+    .error { color: var(--dc-color-error); font-size: var(--dc-font-size-sm); }
+    .field--error input { border-color: var(--dc-color-error); }
+
+    .dark-band { background: var(--dc-color-navy); color: var(--dc-color-white); padding: var(--dc-space-8); border-radius: var(--dc-radius-lg); }
+    .dark-band h2, .dark-band h3, .dark-band p { color: var(--dc-color-white); }
+    .dark-band .eyebrow { color: var(--dc-color-orange); }
+
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: var(--dc-space-7); align-items: center; }
+    .hero-copy p { max-width: 62ch; font-size: var(--dc-font-size-lg); }
+    .hero-media { min-height: 360px; border-radius: var(--dc-radius-md); overflow: hidden; background: var(--dc-color-soft-blue); display: flex; align-items: end; justify-content: center; }
+    .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .accent { color: var(--dc-color-orange); }
+
+    .sales-flow { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: var(--dc-space-3); }
+    .sales-flow div { padding: var(--dc-space-4); border-radius: var(--dc-radius-sm); background: var(--dc-color-surface-light); color: var(--dc-color-heading); font-weight: 700; text-align: center; border: var(--dc-border-default); }
+    .sales-flow div:last-child { background: var(--dc-color-orange); color: var(--dc-color-white); border-color: var(--dc-color-orange); }
+
+    .icon-row { display: flex; gap: var(--dc-space-5); flex-wrap: wrap; }
+    .icon-sample { display: flex; align-items: center; gap: var(--dc-space-2); color: var(--dc-color-heading); }
+    .icon { width: 24px; height: 24px; flex: 0 0 auto; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .icon--orange { color: var(--dc-color-orange); }
+    .icon--teal { color: var(--dc-color-teal); }
+    .icon--success { color: var(--dc-color-success); }
+
+    @media (max-width: 900px) {
+      .ds-grid, .ds-grid-2, .process, .hero { grid-template-columns: 1fr; }
+      .sales-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav-links { display: none; }
+      .result-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .ds-shell { padding-left: var(--dc-space-4); padding-right: var(--dc-space-4); }
+      .ds-demo, .card, .dark-band { padding: var(--dc-space-5); }
+      .guarantee { grid-template-columns: 1fr; }
+      .sales-flow { grid-template-columns: 1fr; }
+      .button-row .btn { width: 100%; }
+      .hero-media { min-height: 280px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition-duration: 0ms; }
+      .btn:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="ds-shell">
+    <header class="ds-header">
+      <span class="ds-kicker">Milestone 4 · Working Catalog</span>
+      <h1>DCMLLC component system</h1>
+      <p>This page is the visual implementation reference for new branded work. It uses the canonical tokens directly. It is not an Elementor paste fragment; channel delivery requirements live in <code>SCHEMES.md</code>.</p>
+    </header>
+
+    <section class="ds-section" id="type">
+      <span class="eyebrow">Typography</span>
+      <h2>Clear hierarchy, one web typeface</h2>
+      <div class="ds-demo">
+        <h1>Build work that gives you <span class="accent">more control.</span></h1>
+        <h2>Know what you want next.</h2>
+        <h3>Make a plan you can use.</h3>
+        <h4>Get clear before you make the move.</h4>
+        <h5>Useful support, not more noise.</h5>
+        <h6>Small heading</h6>
+        <p>Body copy stays plain, direct, and easy to read. Long-form copy uses neutral gray while headings use Brand Navy.</p>
+        <p class="help">Small and caption text uses neutral gray rather than a navy-derived tint.</p>
+      </div>
+    </section>
+
+    <section class="ds-section" id="buttons">
+      <span class="eyebrow">Actions</span>
+      <h2>Buttons and links</h2>
+      <div class="ds-demo ds-stack">
+        <div class="button-row">
+          <a class="btn btn-primary" href="https://dylancornelius.com/schedule-clarity-call">Book a Free Clarity Call</a>
+          <a class="btn btn-secondary" href="#">See How It Works</a>
+          <a class="btn btn-outline" href="#">Read Client Results</a>
+          <a class="btn btn-teal" href="#">Review Your Next Step</a>
+        </div>
+        <p>Inline links stay <a class="inline-link" href="#">navy and underlined</a> at rest. Orange is reserved for hover and stronger visual emphasis.</p>
+      </div>
+    </section>
+
+    <section class="ds-section" id="cards">
+      <span class="eyebrow">Cards</span>
+      <h2>Cards use structure before decoration</h2>
+      <div class="ds-grid">
+        <article class="card">
+          <h3>Clear next step</h3>
+          <p>Use a white surface, soft border, and simple spacing. One accent is enough.</p>
+        </article>
+        <article class="card card--feature">
+          <h3>Feature panel</h3>
+          <p>Large panels may use the 20px radius when extra emphasis is useful.</p>
+        </article>
+        <article class="card card--dark">
+          <h3>Dark proof card</h3>
+          <p>Dark cards use Brand Navy, not a separate indigo or arbitrary near-black.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="ds-section" id="testimonial">
+      <span class="eyebrow">Social proof</span>
+      <h2>Testimonial card</h2>
+      <article class="card testimonial">
+        <div class="avatar" aria-hidden="true">DC</div>
+        <div>
+          <blockquote class="quote">“I knew what I wanted, had a plan, and could move forward without second-guessing every step.”</blockquote>
+          <p class="attribution"><strong>Client name</strong> · Role or outcome</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="ds-section" id="process">
+      <span class="eyebrow">Framework</span>
+      <h2>Process blocks</h2>
+      <div class="process">
+        <article class="process-step"><div class="process-number">1</div><h3>Get clear</h3><p>Define the work, life, and level of control you want.</p></article>
+        <article class="process-step"><div class="process-number">2</div><h3>Choose the path</h3><p>Build a plan around what matters and what the market will support.</p></article>
+        <article class="process-step"><div class="process-number">3</div><h3>Make the move</h3><p>Take focused action, learn from results, and keep moving.</p></article>
+      </div>
+    </section>
+
+    <section class="ds-section" id="case-study">
+      <span class="eyebrow">Results</span>
+      <h2>Case-study result pattern</h2>
+      <article class="card result-layout">
+        <div>
+          <h3>More control over the next move</h3>
+          <p>Lead with autonomy and control. Then show financial outcomes and fulfillment when they are relevant and supported.</p>
+        </div>
+        <div class="result-number">+$33K</div>
+      </article>
+    </section>
+
+    <section class="ds-section" id="guarantee">
+      <span class="eyebrow">Risk reversal</span>
+      <h2>Guarantee treatment</h2>
+      <article class="guarantee">
+        <div class="guarantee-mark">Clear<br>Promise</div>
+        <div>
+          <h3>State the promise plainly.</h3>
+          <p>Use a guarantee block only when the actual offer includes one. Keep the copy specific and avoid hype or false urgency.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="ds-section" id="navigation">
+      <span class="eyebrow">Navigation</span>
+      <h2>Navigation pattern</h2>
+      <div class="nav-demo">
+        <a class="brand-lockup" href="#">
+          <img src="../assets/images/brand/dylan-logo-150.svg" alt="Dylan Cornelius logo">
+          <span>Dylan Cornelius</span>
+        </a>
+        <nav class="nav-links" aria-label="Example navigation">
+          <a href="#" aria-current="page">Home</a>
+          <a href="#">Work With Me</a>
+          <a href="#">About</a>
+          <a class="btn btn-primary" href="https://dylancornelius.com/schedule-clarity-call">Book a Call</a>
+        </nav>
+      </div>
+      <p class="ds-note">On smaller screens the full link row yields to a mobile menu implementation. The mobile control must remain at least 44×44px and preserve clear focus/active states.</p>
+    </section>
+
+    <section class="ds-section" id="forms">
+      <span class="eyebrow">Forms</span>
+      <h2>Form fields and validation</h2>
+      <form class="card form-grid" action="#" onsubmit="return false;">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" aria-describedby="email-help">
+          <span id="email-help" class="help">Use the email where you want your call details sent.</span>
+        </div>
+        <div class="field field--error">
+          <label for="example-error">Example error state</label>
+          <input id="example-error" type="text" aria-invalid="true" value="">
+          <span class="error">Please complete this field.</span>
+        </div>
+        <button class="btn btn-primary" type="submit">Continue</button>
+      </form>
+    </section>
+
+    <section class="ds-section" id="dark">
+      <span class="eyebrow">Dark section</span>
+      <h2>Navy carries the dark system</h2>
+      <div class="dark-band">
+        <span class="eyebrow">Proof</span>
+        <h2>Real people. Clear outcomes.</h2>
+        <p>Dark sections use Brand Navy with white text, Orange for primary emphasis, and Teal only when a second positive signal is useful.</p>
+        <a class="btn btn-primary" href="#">See Client Results</a>
+      </div>
+    </section>
+
+    <section class="ds-section" id="icons">
+      <span class="eyebrow">Icons</span>
+      <h2>Simple line-icon system</h2>
+      <p class="ds-note">Use simple 24px stroke icons with rounded joins/caps. Icons inherit a semantic color; do not introduce a separate rainbow icon palette.</p>
+      <div class="icon-row">
+        <span class="icon-sample icon--orange"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Next step</span>
+        <span class="icon-sample icon--teal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M8.5 12l2.2 2.2 4.8-5"/></svg> Forward progress</span>
+        <span class="icon-sample icon--success"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4 4L19 7"/></svg> Result</span>
+      </div>
+    </section>
+
+    <section class="ds-section" id="hero">
+      <span class="eyebrow">Page pattern</span>
+      <h2>Conversion hero</h2>
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Career clarity</span>
+          <h1>Get more <span class="accent">control</span> over what comes next.</h1>
+          <p>Figure out what fits, choose a path, and build a plan you can act on.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="https://dylancornelius.com/schedule-clarity-call">Book a Free Clarity Call</a>
+            <a class="btn btn-outline" href="#">See Client Results</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="../assets/images/banner/men.png" alt="Dylan Cornelius">
+        </div>
+      </div>
+    </section>
+
+    <section class="ds-section" id="sales-flow">
+      <span class="eyebrow">Sales page</span>
+      <h2>Canonical section sequence</h2>
+      <div class="sales-flow" aria-label="Sales-page section sequence">
+        <div>Hero</div><div>Problem</div><div>Solution</div><div>Social Proof</div><div>Guarantee</div><div>CTA</div>
+      </div>
+      <p class="ds-note">This sequence is the default composition scheme, not a requirement that every section have identical length or visual weight.</p>
+    </section>
+  </main>
+</body>
+</html>
