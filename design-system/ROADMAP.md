@@ -2,7 +2,7 @@
 
 ## Refined six-milestone plan
 
-The original six-step roadmap is retained, with brand invariants, reusable components, and channel-specific delivery schemes kept separate so they do not drift into one another.
+The six-stage structure is retained, with brand invariants, reusable components, channel-specific delivery schemes, and approved visual references kept separate so they do not drift into one another.
 
 ---
 
@@ -16,11 +16,6 @@ Completed:
 - `AGENTS.md` and `CLAUDE.md` created as thin AI entry points
 - legacy portfolio/Figma treated as evidence rather than automatic doctrine
 
-**Primary artifacts:**
-- `README.md`
-- `AGENTS.md`
-- `CLAUDE.md`
-
 ---
 
 ## Milestone 2 — Evidence & Production Audit ✅
@@ -33,8 +28,7 @@ Completed:
 - production-tested Claude rules introduced as higher-authority evidence
 - conflicts explicitly surfaced rather than averaged
 
-**Primary artifact:**
-- `AUDIT.md`
+Primary artifact: `AUDIT.md`
 
 ---
 
@@ -43,21 +37,17 @@ Completed:
 **Goal:** encode the invariant brand system after reconciling production-tested practice.
 
 Completed:
-- production-tested Claude rules incorporated as canonical where explicit
-- Brand Orange fixed at `#D9660E`; hover `#BE590C`
-- Brand Navy fixed at `#27374D`
-- Brand Teal fixed at `#1A9E8E`
-- Deep Indigo and previous M3 orange/navy values retired
+- Brand Orange `#D9660E`; hover `#BE590C`
+- Brand Navy `#27374D`
+- Brand Teal `#1A9E8E`
+- previous M3 orange/navy/dark values retired
 - Inter fixed as sole web typeface
 - typography/spacing/radius/shadow/motion tokens reconciled
 - logo status resolved
-- copy constraints that affect design formalized
+- design-affecting copy constraints formalized
 - channel-specific rules separated into `SCHEMES.md`
 
-**Primary artifacts:**
-- `BRAND.md`
-- `tokens.css`
-- `SCHEMES.md`
+Primary artifacts: `BRAND.md`, `tokens.css`, `SCHEMES.md`
 
 ---
 
@@ -65,108 +55,122 @@ Completed:
 
 **Goal:** turn primitive rules into reusable, visual, executable patterns that Claude and ChatGPT can reuse without inventing new styling.
 
-Completed component contracts:
+Completed:
 - typography hierarchy
-- primary Orange CTA
-- secondary Navy button
-- Navy outline button
-- Teal secondary button
-- inline text links
-- standard / feature / dark cards
-- testimonial/proof cards
-- process/framework blocks
-- case-study/result layouts
-- guarantee/risk-reversal treatment
-- desktop navigation + active states
-- mobile navigation principles
-- form fields, labels, help text, validation/error states
-- dark-section treatment
-- image/portrait treatments
-- icon system
+- Orange primary CTA; Navy/outline/Teal secondary variants
+- inline links
+- cards, testimonial/proof, process/framework, result/case-study, guarantee
+- desktop/mobile navigation principles
+- forms and validation
+- dark sections
+- icon grammar
+- portrait/image component rules
 - conversion hero
-
-Completed page patterns:
+- Problem / Solution / Social Proof / Guarantee / CTA sections
 - Hero → Problem → Solution → Social Proof → Guarantee → CTA sales-page sequence
-- Problem, Solution, Social Proof, Guarantee, and conversion CTA section contracts
-- article/post CTA hierarchy
-- proof/testimonial bands
-
-Completed behavior/governance:
-- wide / compact / small-mobile responsive guidance
+- article CTA hierarchy
+- component responsive behavior
 - component accessibility baseline
-- component change-control process
-- separation between invariant component contracts and channel delivery schemes
+- component governance
 
-**Primary artifacts:**
-- `COMPONENTS.md` — canonical component contracts
-- `components.html` — canonical visual implementation reference
-
-**Completion test:** a human, Claude, or ChatGPT can understand both the behavioral contract and visual grammar without reading legacy portfolio CSS.
+Primary artifacts: `COMPONENTS.md`, `components.html`
 
 ---
 
-## Milestone 5 — Channel Schemes & Approved Reference Library 🔶 CURRENT
+## Milestone 5 — Channel Schemes & Approved Reference Library ✅
 
-**Goal:** pair the design system with channel-specific execution rules and approved visual precedent.
+**Goal:** pair the component system with platform-specific execution rules and approved visual precedent so agents do not infer channel mechanics or select arbitrary imagery.
 
-Already implemented:
-- Elementor/WordPress delivery scheme
-- Gutenberg scheme
-- Elementor blank-canvas scheme
-- featured-image 1200×628 scheme
-- WordPress post-content and five-file delivery schemes
+Completed channel schemes:
+- Elementor/WordPress HTML
+- Gutenberg
+- Elementor blank canvas
+- WordPress featured-media caveat
+- 1200×628 featured-image/Open Graph master
+- mobile/blog-grid crop-safe behavior without creating a duplicate mobile master
+- WordPress post-content delivery
+- five-file WordPress deliverable standard
 - scheduling-link routing
-- high-level sales-page composition scheme
+- sales-page composition
+- Skool group cover
+- Skool group icon
+- Skool post header / event imagery
+- cross-channel asset reuse policy
 
-Still required:
-- approved reference-image library
-- canonical headshot/reference crops
-- strongest approved photography examples by use case
-- reference mapping from components to approved imagery where useful
-- true vector logo task or source-master identification
-- Skool cover-image scheme
-- Skool post-header scheme
-- mobile blog-grid thumbnail validation
-- any future social/presentation schemes that prove repeatedly necessary
+Completed reference system:
+- canonical current logo identified
+- vector-master status resolved without inventing a replacement
+- primary headshot and professional contextual portrait precedents identified
+- repository Dylan portrait source pool classified
+- Big Bend/tandem lifestyle category formalized
+- speaker/office batch category formalized
+- named client proof-photo rules formalized
+- featured-image crop-safe composition formalized
+- component-to-reference mapping created
+- legacy/unclassified imagery quarantined
+- static visual reference gallery created
 
-**Primary artifacts:**
+Primary artifacts:
 - `SCHEMES.md`
-- `references/`
+- `references/README.md`
+- `references/index.html`
 
-**Completion test:** channel differences are explicit and approved visual precedent is available, so no AI needs to infer whether WordPress, featured-image, Skool, general-web, or asset-specific rules apply.
+**Completion test:** channel differences and approved visual precedent are explicit. An agent does not need to infer whether WordPress, Skool, featured-image, general-web, or asset-specific rules apply, and it does not need to browse arbitrary repository images to choose a visual.
 
 ---
 
-## Milestone 6 — Cross-Agent Validation, Migration & Drift Control
+## Milestone 6 — Cross-Agent Validation, Migration & Drift Control 🔶 CURRENT
 
-**Goal:** prove that Claude, ChatGPT, and humans can independently create consistent work from the same GitHub system.
+**Goal:** prove that Claude, ChatGPT, and humans can independently create materially consistent work from the same GitHub system, then make drift correction part of normal maintenance.
 
-Required validation:
-- give Claude and ChatGPT the same representative design tasks
-- compare color, typography, spacing, CTA hierarchy, imagery, copy, component choice, and channel handling
-- identify any ambiguous rule that produces materially different output
-- tighten rules only where ambiguity causes real drift
+### Validation suite
 
-Required migration/governance:
-- intentionally migrate legacy portfolio pages when touched
-- never perform an automatic global redesign merely because tokens exist
-- version meaningful system changes in Git
-- record approved exceptions rather than letting exceptions become accidental rules
-- periodically remove obsolete/duplicate guidance
+Run the same representative briefs independently through Claude and ChatGPT:
 
-Suggested representative tests:
 1. sales-page hero
 2. testimonial/proof section
 3. simple form section
 4. 1200×628 featured image
 5. Gutenberg blog-post CTA
 6. Elementor dark section
-7. Skool asset after its scheme is defined
+7. Skool cover or post header
 
-**Completion test:** independent agents produce materially consistent branded output and can explain which canonical rule, component contract, reference, or scheme drove each major choice.
+Compare:
+- color/token selection
+- typography hierarchy
+- spacing/radius/shadow choices
+- CTA hierarchy and routing
+- imagery/reference choice
+- copy constraints
+- responsive behavior
+- channel-specific mechanics
+
+### Drift-resolution rule
+
+When outputs differ materially:
+1. identify the ambiguous or conflicting canonical rule
+2. correct the design system, not the one-off prompt
+3. update the smallest appropriate layer: BRAND, token, component, reference, or scheme
+4. rerun the representative test
+
+### Legacy migration
+
+- migrate legacy portfolio pages intentionally when they are touched
+- do not perform an automatic global redesign merely because tokens exist
+- replace retired colors/fonts/components as part of purposeful edits
+- keep content/functionality stable unless the task explicitly changes them
+
+### Version/change control
+
+- version meaningful system changes in Git
+- record approved exceptions instead of allowing silent divergence
+- periodically remove obsolete/duplicate guidance
+- keep `AGENTS.md` and `CLAUDE.md` thin pointers to the same canonical system
+
+**Completion test:** independent agents produce materially consistent branded output and can identify which canonical brand rule, token, component contract, reference, and channel scheme drove each major design choice.
 
 ---
 
 # Current one-line roadmap
 
-**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → 🔶 M5 Schemes & References → M6 Validation/Migration/Drift Control**
+**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → ✅ M5 Schemes & References → 🔶 M6 Validation/Migration/Drift Control**
