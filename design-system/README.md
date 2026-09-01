@@ -1,16 +1,17 @@
 # Dylan Cornelius Design System
 
 ## Status
-Milestones 1–3 are complete and reconciled with the production-tested Claude project rules supplied September 1, 2026. **Milestone 4 — Component & Page Pattern System — is now in progress with an initial `components.html` catalog implemented.**
+Milestones 1–4 are complete and reconciled with the production-tested Claude project rules supplied September 1, 2026. **Milestone 5 — Channel Schemes & Approved Reference Library — is now current.**
 
 ## Purpose
 This directory is the canonical design-system authority for Dylan Cornelius / DCMLLC branded web pages and graphical assets.
 
-The system deliberately separates three layers:
+The system deliberately separates four layers:
 
 1. **Brand invariants** — `BRAND.md`
-2. **Reusable design primitives/components** — `tokens.css` + `components.html`
-3. **Channel-specific delivery schemes** — `SCHEMES.md`
+2. **Design primitives** — `tokens.css`
+3. **Reusable component/page-pattern contracts** — `COMPONENTS.md` + `components.html`
+4. **Channel-specific delivery schemes** — `SCHEMES.md`
 
 This keeps production constraints from mutating the underlying brand and keeps brand rules from pretending every platform behaves the same way.
 
@@ -32,7 +33,8 @@ The September 1, 2026 production-tested Claude brief has been incorporated into 
 - `AUDIT.md` — historical evidence, conflicts, and legacy/template residue; **not canonical styling**
 - `BRAND.md` — canonical invariant brand, visual, imagery, and design-affecting copy rules
 - `tokens.css` — canonical machine-readable design values
-- `components.html` — working visual catalog of reusable components and page patterns
+- `COMPONENTS.md` — canonical component/page-pattern contracts, responsive behavior, accessibility, and usage rules
+- `components.html` — canonical visual implementation reference for reusable components and page patterns
 - `SCHEMES.md` — canonical channel-specific delivery rules for Elementor, Gutenberg, featured images, WordPress posts, scheduling routing, and future channels
 
 ## Key reconciled decisions
@@ -58,12 +60,13 @@ Before producing or modifying branded work:
 1. Read this README.
 2. Read `BRAND.md`.
 3. Read/use `tokens.css`.
-4. Use `components.html` as the visual component precedent.
-5. If the deliverable is channel-specific, read the matching rules in `SCHEMES.md`.
-6. Use `AUDIT.md` only for history/evidence; never let it override current canonical rules.
-7. Use `ROADMAP.md` to understand what is complete versus still being defined.
+4. Read `COMPONENTS.md` for component anatomy, variants, responsive behavior, and accessibility rules.
+5. Use `components.html` as the visual implementation precedent.
+6. If the deliverable is channel-specific, read the matching rules in `SCHEMES.md`.
+7. Use `AUDIT.md` only for history/evidence; never let it override current canonical rules.
+8. Use `ROADMAP.md` to understand what is complete versus still being defined.
 
-When a new requirement conflicts with canonical rules, follow Dylan's explicit current instruction and update the canonical files if the change is intended to persist.
+If a component need is already covered by `COMPONENTS.md`, reuse it before inventing a new pattern. When a new requirement conflicts with canonical rules, follow Dylan's explicit current instruction and update the canonical files if the change is intended to persist.
 
 ## Change control
 
@@ -72,8 +75,10 @@ When a new requirement conflicts with canonical rules, follow Dylan's explicit c
 - do not silently average conflicting rules
 - do not copy arbitrary legacy CSS into new components
 - migrate legacy pages deliberately when they are touched
+- when production experience reveals a component problem, update `COMPONENTS.md` and `components.html` together
+- channel-only differences belong in `SCHEMES.md`, not in global tokens
 - avoid duplicating canonical prose across `AGENTS.md` and `CLAUDE.md`; those files only point agents here
 
 ## Current one-line roadmap
 
-**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → 🔶 M4 Components & Page Patterns → M5 Schemes & References → M6 Validation/Migration/Drift Control**
+**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → 🔶 M5 Schemes & References → M6 Validation/Migration/Drift Control**
