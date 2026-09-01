@@ -1,7 +1,7 @@
 # Dylan Cornelius Design System
 
 ## Status
-Milestone 1 — Source of Truth established.
+Milestone 2 — Brand Audit completed. Canonical brand rules and tokens are pending Milestone 3.
 
 ## Purpose
 This directory is the canonical design-system authority for Dylan Cornelius branded web pages and graphical assets.
@@ -28,6 +28,10 @@ AI inference must never override an approved or canonical rule.
 - Once a design decision is approved and recorded in `/design-system/`, downstream pages and assets should follow it unless Dylan explicitly requests an exception or a system revision.
 - Canonical rules should be written once and referenced elsewhere rather than duplicated across AI-specific instruction files.
 
+## Current design-system files
+- `README.md` — governance, precedence, and project status
+- `AUDIT.md` — Milestone 2 evidence inventory, conflicts, template-residue quarantine, and Milestone 3 decision queue. **AUDIT.md is research evidence, not itself a canonical brand specification.**
+
 ## Planned canonical files
 The following files will be created in later milestones:
 
@@ -36,10 +40,10 @@ The following files will be created in later milestones:
 - `components.html` — approved visual component and pattern catalog
 - `references/` — approved visual references
 
-Until those files are created and approved, this README governs source selection and conflict resolution only. It does **not** declare current portfolio styling to be approved brand doctrine.
+Until those files are created and approved, this README governs source selection and conflict resolution. The audit records evidence but does **not** declare current portfolio styling to be approved brand doctrine.
 
 ## AI usage
-Any AI or human contributor creating branded work from this repository should read this file before making visual decisions. Once the later canonical files exist, they should also be read before producing or modifying branded assets.
+Any AI or human contributor creating branded work from this repository should read this file before making visual decisions. `AUDIT.md` may be used to understand existing evidence and unresolved conflicts, but it must not be treated as authorization to choose among disputed values. Once the later canonical files exist, they should also be read before producing or modifying branded assets.
 
 ## Change control
 Changes to canonical design-system rules should be intentional and reviewable in Git history. Silent stylistic drift is not an acceptable update mechanism.
