@@ -2,7 +2,7 @@
 
 ## Refined six-milestone plan
 
-The six-stage structure is retained, with brand invariants, reusable components, channel-specific delivery schemes, and approved visual references kept separate so they do not drift into one another.
+The six-stage structure is complete at the implementation level. Milestone 6 remains an ongoing validation discipline with an empirical cross-agent certification gate.
 
 ---
 
@@ -57,21 +57,14 @@ Primary artifacts: `BRAND.md`, `tokens.css`, `SCHEMES.md`
 
 Completed:
 - typography hierarchy
-- Orange primary CTA; Navy/outline/Teal secondary variants
-- inline links
-- cards, testimonial/proof, process/framework, result/case-study, guarantee
+- CTA/button hierarchy
+- links, cards, proof, process, results, guarantees
 - desktop/mobile navigation principles
-- forms and validation
-- dark sections
-- icon grammar
-- portrait/image component rules
-- conversion hero
-- Problem / Solution / Social Proof / Guarantee / CTA sections
-- Hero → Problem → Solution → Social Proof → Guarantee → CTA sales-page sequence
+- forms/validation
+- dark sections, icons, portrait/image rules
+- conversion hero and sales-page section patterns
 - article CTA hierarchy
-- component responsive behavior
-- component accessibility baseline
-- component governance
+- component responsive/accessibility/governance rules
 
 Primary artifacts: `COMPONENTS.md`, `components.html`
 
@@ -79,98 +72,70 @@ Primary artifacts: `COMPONENTS.md`, `components.html`
 
 ## Milestone 5 — Channel Schemes & Approved Reference Library ✅
 
-**Goal:** pair the component system with platform-specific execution rules and approved visual precedent so agents do not infer channel mechanics or select arbitrary imagery.
+**Goal:** pair the component system with platform-specific execution rules and approved visual precedent.
 
-Completed channel schemes:
-- Elementor/WordPress HTML
-- Gutenberg
-- Elementor blank canvas
-- WordPress featured-media caveat
-- 1200×628 featured-image/Open Graph master
-- mobile/blog-grid crop-safe behavior without creating a duplicate mobile master
-- WordPress post-content delivery
-- five-file WordPress deliverable standard
-- scheduling-link routing
-- sales-page composition
-- Skool group cover
-- Skool group icon
-- Skool post header / event imagery
+Completed:
+- Elementor/WordPress HTML, Gutenberg, blank-canvas, featured-media, featured-image, blog-post, five-file delivery, scheduling routing, sales-page and Skool schemes
 - cross-channel asset reuse policy
+- canonical logo/reference hierarchy
+- Dylan portrait hierarchy and named-client proof-photo rules
+- crop-safe featured-image reference treatment
+- component-to-reference mapping
+- legacy/unclassified imagery quarantine
+- visual reference gallery
 
-Completed reference system:
-- canonical current logo identified
-- vector-master status resolved without inventing a replacement
-- primary headshot and professional contextual portrait precedents identified
-- repository Dylan portrait source pool classified
-- Big Bend/tandem lifestyle category formalized
-- speaker/office batch category formalized
-- named client proof-photo rules formalized
-- featured-image crop-safe composition formalized
-- component-to-reference mapping created
-- legacy/unclassified imagery quarantined
-- static visual reference gallery created
-
-Primary artifacts:
-- `SCHEMES.md`
-- `references/README.md`
-- `references/index.html`
-
-**Completion test:** channel differences and approved visual precedent are explicit. An agent does not need to infer whether WordPress, Skool, featured-image, general-web, or asset-specific rules apply, and it does not need to browse arbitrary repository images to choose a visual.
+Primary artifacts: `SCHEMES.md`, `references/README.md`, `references/index.html`
 
 ---
 
-## Milestone 6 — Cross-Agent Validation, Migration & Drift Control 🔶 CURRENT
+## Milestone 6 — Cross-Agent Validation, Migration & Drift Control ✅ OPERATIONALIZED / 🔶 CERTIFICATION
 
-**Goal:** prove that Claude, ChatGPT, and humans can independently create materially consistent work from the same GitHub system, then make drift correction part of normal maintenance.
+**Goal:** make consistency measurable, make legacy convergence deliberate, and correct drift in the shared system rather than in separate agent prompts.
 
-### Validation suite
+### Implemented
 
-Run the same representative briefs independently through Claude and ChatGPT:
+- canonical validation protocol in `VALIDATION.md`
+- seven identical Claude/ChatGPT test briefs in `validation/AGENT-TEST-PACK.md`
+- shared 20-point scoring rubric and certification template in `validation/SCORECARD.md`
+- critical-failure rules
+- compact decision-log requirement for traceability
+- static repository conformance baseline
+- false-positive rules for historical/retired-value documentation
+- drift-resolution workflow by canonical layer
+- legacy migration policy and migration ledger in `MIGRATION.md`
+- persistent exception registry in `EXCEPTIONS.md`
+- AI entry-point requirements wired into `AGENTS.md` and `CLAUDE.md`
 
-1. sales-page hero
-2. testimonial/proof section
-3. simple form section
-4. 1200×628 featured image
-5. Gutenberg blog-post CTA
-6. Elementor dark section
-7. Skool cover or post header
+### Static baseline result
 
-Compare:
-- color/token selection
-- typography hierarchy
-- spacing/radius/shadow choices
-- CTA hierarchy and routing
-- imagery/reference choice
-- copy constraints
-- responsive behavior
-- channel-specific mechanics
+**PASS — September 1, 2026.**
 
-### Drift-resolution rule
+Canonical active tokens/rules are internally aligned. Retired colors/typefaces remain in clearly historical/prohibited documentation and known legacy production files; these are tracked as migration debt rather than mistaken for current system rules.
 
-When outputs differ materially:
-1. identify the ambiguous or conflicting canonical rule
-2. correct the design system, not the one-off prompt
-3. update the smallest appropriate layer: BRAND, token, component, reference, or scheme
-4. rerun the representative test
+### Empirical cross-agent certification gate
 
-### Legacy migration
+Certification is complete only after:
 
-- migrate legacy portfolio pages intentionally when they are touched
-- do not perform an automatic global redesign merely because tokens exist
-- replace retired colors/fonts/components as part of purposeful edits
-- keep content/functionality stable unless the task explicitly changes them
+1. Claude runs all seven briefs unchanged.
+2. ChatGPT runs all seven briefs unchanged.
+3. Both runs are scored against the same rubric.
+4. Every test scores at least 18/20 with no critical failure.
+5. Material discrepancies are corrected in the appropriate canonical layer.
+6. A rerun confirms all affected tests pass for both agents.
 
-### Version/change control
+Because this environment cannot invoke the user's Claude runtime, that paired behavioral run remains **PENDING**, not silently assumed.
 
-- version meaningful system changes in Git
-- record approved exceptions instead of allowing silent divergence
-- periodically remove obsolete/duplicate guidance
-- keep `AGENTS.md` and `CLAUDE.md` thin pointers to the same canonical system
+### Ongoing operating rule
 
-**Completion test:** independent agents produce materially consistent branded output and can identify which canonical brand rule, token, component contract, reference, and channel scheme drove each major design choice.
+After certification, Milestone 6 becomes maintenance rather than a new project phase:
+- rerun affected tests after material design-system changes
+- run the full suite after large changes/new major channels
+- migrate legacy implementation only when touched or explicitly commissioned
+- record justified contextual deviations in `EXCEPTIONS.md`
+- periodically remove obsolete/duplicated guidance
 
 ---
 
 # Current one-line roadmap
 
-**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → ✅ M5 Schemes & References → 🔶 M6 Validation/Migration/Drift Control**
+**✅ M1 Authority → ✅ M2 Audit → ✅ M3 Foundations/Reconciliation → ✅ M4 Components & Page Patterns → ✅ M5 Schemes & References → ✅ M6 Operationalized / 🔶 Cross-Agent Certification**
