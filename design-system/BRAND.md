@@ -1,360 +1,392 @@
-# Dylan Cornelius Brand System
+# DCMLLC Brand System
 
 ## Status
-**Canonical — Milestone 3.**
+**Canonical — Milestone 3 reconciled, September 1, 2026.**
 
-This file defines the approved visual rules for Dylan Cornelius branded web pages and graphical assets. It supersedes conflicting visual treatments found in legacy portfolio CSS, templates, and historical concepts unless an explicit current exception is documented.
+This file defines invariant brand rules for Dylan Cornelius Management LLC (DCMLLC) / Get Your Best Job Ever / Best Job Ever branded web pages and graphical assets.
 
-Use `tokens.css` for implementation values. Use this file for intent, hierarchy, and usage rules.
+The production-tested Claude project brief supplied by Dylan on September 1, 2026 supersedes the earlier Milestone 3 choices where they conflict. Channel-specific implementation rules live in `SCHEMES.md`; implementation values live in `tokens.css`; component implementations live in `components.html`.
 
 ---
 
-# 1. Brand character
+# 1. Brand identity
 
-The visual system should feel:
+**Company:** Dylan Cornelius Management LLC (DCMLLC)  
+**Brand:** Get Your Best Job Ever / Best Job Ever  
+**Primary website:** dylancornelius.com  
+**Primary audience:** mid-career professionals, roughly ages 32–55
 
-- **Clear** — easy to scan, direct hierarchy, no ornamental clutter
-- **Credible** — executive/professional rather than influencer-hype
+The visual and verbal system must feel:
+
+- **Clear** — easy to scan, direct hierarchy, no decorative clutter
+- **Credible** — executive/professional, never influencer-hype
 - **Human** — real people, real outcomes, approachable language and imagery
 - **Decisive** — strong headings, explicit calls to action, confident contrast
-- **Strategic** — structured layouts, visible frameworks, restrained visual logic
 - **Energetic without being frantic** — orange and teal provide energy; motion and decoration remain controlled
+- **Anti-hustle, anti-fluffy, anti-jargon** — direct, plain-spoken, approximately fifth-grade reading level
 
-Avoid generic tech-template styling, decorative complexity for its own sake, random gradients, excessive animation, and large families of near-duplicate colors.
+Avoid generic tech-template styling, ornamental complexity, random gradients, excessive animation, corporate euphemism, and near-duplicate design values.
 
 ---
 
-# 2. Core color system
+# 2. Canonical color system
 
-## Primary brand colors
+## Primary Orange — `#D9660E`
 
-### Brand Navy — `#1E3A5F`
+This is the **only brand orange**.
+
+Use for:
+- primary CTA button backgrounds
+- heading emphasis
+- eyebrows and section labels
+- icons and active states
+- selective accent rules and borders
+
+Interactive hover/active orange is **`#BE590C`**.
+
+Do not use orange as resting inline body-link text. Inline body links use navy and underline.
+
+## Brand Navy — `#27374D`
+
 Primary structural color.
 
 Use for:
-- body/headline text on light backgrounds
-- primary navigation and structural rules
-- primary filled buttons when a conservative/executive treatment is appropriate
-- icons and diagrams that need authority rather than emphasis
+- headings
+- structural rules
+- navigation
+- inline body links
+- dark-section backgrounds
+- secondary filled buttons
 
-### Brand Orange — `#EA5116`
-Primary accent and attention color.
+Dark sections use Brand Navy; there is no separate indigo dark-surface color.
 
-Use for:
-- emphasis inside headings
-- section eyebrows and labels
-- rules, bullets, borders, active states
-- key visual anchors
-- selected calls to action when contrast requirements are met
+## Brand Teal — `#1A9E8E`
 
-Orange should be intentional. Do not scatter orange across every element on a page.
-
-### Brand Teal — `#1A9E8E`
 Secondary accent.
 
 Use for:
 - positive forward movement
-- secondary calls to action
-- selected icons, status markers, and framework accents
-- contrast against orange when a second semantic accent is genuinely useful
+- secondary CTAs when a distinct treatment is useful
+- selected icons and status markers
+- framework accents
 
-Do not use teal merely to make a layout more colorful.
-
-### Deep Indigo — `#2C2C55`
-Canonical dark-section surface.
-
-Use for:
-- full-width dark bands
-- testimonial/proof sections
-- high-emphasis narrative sections
-- occasional hero or footer backgrounds
-
-Deep Indigo replaces the legacy portfolio's arbitrary near-black family as the preferred branded dark surface.
+Do not use teal merely to add visual variety.
 
 ## Supporting colors
 
-- Soft Navy: `#2C4D6F` — secondary text and lower-emphasis structure
-- Soft Blue: `#DCE6F4` — borders, diagram fills, quiet informational backgrounds
-- Soft Gray: `#F3F4F6` — page sections, cards, neutral separation
-- Warm Tint: `#FFF5F0` — restrained orange-tinted background
-- Success Green: `#30B38F` — semantic success/check/progress only; do not substitute for Brand Teal
+- Light neutral background: `#F9FAFB`
+- Body text gray: `#4B5563`
+- Caption / muted text: `#6B7280`
+- Soft blue background / border: `#DCE6F4`
+- Success / trust: `#30B38F`
+- Error / alert: `#EA5117` — warnings only
 - White: `#FFFFFF`
-- Near Black: `#111111` — functional text only where contrast requires it; not a primary brand surface
 
-## Noncanonical legacy colors
-Unless explicitly approved for a specific future component, do not introduce or propagate:
+Body and caption text use neutral gray, not navy-derived gray.
 
-- legacy near-blacks such as `#161616`, `#131313`, `#202020`, `#222222`, etc. as the default page system
-- portfolio orange variants such as `#FF6600`, `#FF630E`, `#FD562A`, `#EC671A`, `#ff4a17`
-- legacy default blues such as `#4277FF` / `#3960EA`
-- homepage pathway brown `#7A4B2B`
-- homepage pathway blue `#1F5F9B`
+## Retired colors — prohibited in new work
 
-Existing pages may retain those values until intentionally migrated. New branded work should not copy them.
+- `#EA5116` — retired orange
+- `#1E3A5F` — retired navy
+- `#2C2C55` — retired M3 dark indigo
+- `#FF6600`, `#FF630E`, `#FD562A`, `#EC671A`, `#ff4a17`, `#ff7a00` — legacy oranges
 
----
-
-# 3. Accessibility and color contrast
-
-Brand colors do not override accessibility requirements.
-
-- White text on Brand Navy or Deep Indigo is approved.
-- Brand Orange `#EA5116` is primarily an accent color. At ordinary button-label sizes, do **not** assume white text on Brand Orange is accessible.
-- For filled orange controls with normal-size white labels, use the accessible Action Orange token from `tokens.css` (`#C94310`).
-- Brand Orange may use near-black text when the brighter orange surface is required.
-- For filled teal controls with white normal-size labels, use the accessible Action Teal token from `tokens.css` (`#147D72`).
-- Visible keyboard focus must never be removed.
-- Interactive targets should be at least 44×44 CSS pixels where practical.
+Existing legacy pages may contain these values until intentionally migrated. Never copy them into new deliverables.
 
 ---
 
-# 4. Typography
+# 3. Typography
 
-## Canonical family
-**Inter** is the single brand type family.
+## Web / HTML
 
-Use:
+**Inter is the sole web type family.**
+
+Weights:
 - 400 Regular
 - 600 Semi Bold
 - 700 Bold
 
 Fallback stack:
+
 `Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`
 
-Do not introduce Roboto, Roboto Serif, DM Sans, Open Sans, Playfair Display, or another family into new branded work without an explicit system revision.
+Do not introduce Roboto, Roboto Serif, DM Sans, Open Sans, Playfair Display, or another web typeface without an explicit system revision.
 
-## Hierarchy
+## Featured-image exception
 
-### Display / H1
-- large, direct, sentence case
-- typically 600 or 700
-- tight line height
-- orange emphasis may be used for a short phrase, not every important word
+**Bricolage Grotesque Bold** is approved for headline text baked into 1200×628 featured-image PNGs. It is not a web/CSS font token.
 
-### H2 / section headline
-- substantial visual step below H1
-- typically 600 or 700
-- should carry the idea of the section without requiring body copy to explain the heading
+## Canonical type scale
 
-### H3 / card headline
-- 600 or 700
-- concise and scannable
+- H1: target ~56px desktop
+- H2: target ~48px desktop
+- H3: target ~40px desktop
+- H4: target ~32px desktop
+- H5: 24px
+- H6: 20px
+- Body: 16px
+- Small: 14px
+- Extra small: 12px
 
-### Body
-- 400 default
-- 600 for meaningful emphasis
-- avoid long passages in all-bold text
+Use the responsive definitions in `tokens.css`. Channel delivery may use explicit pixel equivalents where the platform requires them; see `SCHEMES.md`.
 
-### Eyebrow / section label
+## Line heights
+
+- Display / H1: 1.1
+- H2–H4: 1.2
+- Long-form body: 1.6
+- Card copy / captions / tight UI: 1.4
+
+## Eyebrows / section labels
+
 - small
-- 700
+- 700 weight
 - uppercase
-- wide tracking
-- usually Brand Orange or Brand Navy
+- `letter-spacing: 0.16em`
+- Brand Orange or Brand Navy only
 
 ## Copy width
-Long-form text should generally remain between roughly 55 and 75 characters per line. Do not stretch prose across the full width of large screens.
+
+Long-form prose should generally remain about 55–75 characters per line.
 
 ---
 
-# 5. Layout and width
-
-## Canonical content widths
-Use only these default bands unless the composition has a specific reason not to:
-
-- **Narrow:** 720px — articles, explanations, forms, focused conversion copy
-- **Standard:** 960px — most content sections
-- **Wide:** 1200px — heroes, comparison layouts, multi-column sections
-
-Full-bleed backgrounds may span the viewport while content remains inside one of these bands.
-
-## Page rhythm
-- Prefer centered, readable content over extremely wide desktop layouts.
-- Use generous vertical whitespace to separate ideas.
-- Section boundaries should be obvious through spacing, background change, or a deliberate rule — not through decorative clutter.
-- Two-column layouts should collapse cleanly on smaller screens.
-- Mobile composition takes precedence over preserving desktop geometry.
-
----
-
-# 6. Spacing
-
-Use the spacing scale in `tokens.css` rather than one-off numbers.
-
-Default rhythm:
-- 4 / 8 / 12 / 16px for compact internal relationships
-- 24 / 32px for component padding and local groups
-- 48 / 64px for section groups
-- 96px for major desktop section separation
-
-Do not add new spacing values simply to match a historical page pixel-for-pixel.
-
----
-
-# 7. Shape and borders
-
-Canonical radii:
-- **6px** — controls and compact utility elements
-- **12px** — default cards, media, form containers
-- **20px** — large feature cards or high-emphasis panels
-- **999px** — pills only
-- **50%** — true circular avatars/icons only
-
-Borders should usually be 1px and quiet. Brand Orange can be used as a selective accent border, not as the default border on every card.
-
-Do not reproduce the legacy collection of arbitrary 4/5/8/10/15/16/18/24/30px radii in new work.
-
----
-
-# 8. Elevation
-
-Use elevation sparingly.
-
-Preferred order:
-1. spacing/background separation
-2. subtle border
-3. restrained shadow when actual elevation is useful
-
-Avoid heavy template-style drop shadows, glowing cards, or stacked shadow effects unless the component is explicitly approved later.
-
-Use the three shadow levels in `tokens.css`; do not invent additional shadow recipes casually.
-
----
-
-# 9. Buttons and calls to action
+# 4. Buttons and links
 
 ## Primary CTA
-Default: Brand Navy background + white label.
 
-Use when the action is the main decision on the page.
+Default conversion control:
+- background: Brand Orange `#D9660E`
+- text: White `#FFFFFF`
+- hover/active: `#BE590C`
+- minimum height: 44px
+- default radius: 6px
 
-## Orange CTA
-Use Action Orange + white label when orange is needed as the filled conversion control. Brand Orange remains the visual identity accent around it.
+Orange is the default primary CTA color across sales pages, landing pages, blog posts, and other web contexts.
 
-## Teal CTA
-Use Action Teal + white label for a positive/forward secondary action.
+## Secondary button
 
-## Secondary / outline
-White or transparent background with Brand Navy border/text on light surfaces; white border/text on dark surfaces.
+Use either:
+- Navy outline + Navy text on light surfaces, or
+- Navy fill + White text
 
-## Shape
-Buttons normally use 6px or pill radius. Do not mix many button shapes on the same page.
+## Teal button
 
-## Language
-CTA labels should describe the user's next step. Avoid vague labels such as “Learn More” when a more specific action is available.
+Use Brand Teal + White for positive/forward secondary actions when distinct visual weight is useful.
+
+## CTA language
+
+CTA labels name the actual next step. Prefer “Book a Free Clarity Call” over vague labels such as “Learn More.”
+
+Never use unverified scarcity language such as “limited spots available.”
+
+## Inline body links
+
+Resting/default inline body links:
+- Navy `#27374D`
+- underlined
+
+Orange may be used as the hover color, but not as the sustained normal-size body-link color.
 
 ---
 
-# 10. Cards and framework blocks
+# 5. Layout and spacing
 
-Default card treatment:
-- White or Soft Gray surface
-- 1px Soft Blue or subtle neutral border
-- 12px radius
-- restrained padding using canonical spacing
-- Navy text
-- one accent color at a time
+## Content width bands
 
-Dark cards are reserved for sections that intentionally use Deep Indigo.
+- **Narrow:** 720px — articles, forms, focused conversion copy
+- **Standard:** 960px — most sections
+- **Wide:** 1200px — heroes, comparisons, multi-column sections
 
-Framework/process diagrams may combine Navy, Orange, Teal, Soft Blue, and Warm Tint, but should remain legible without relying solely on color.
+Full-bleed backgrounds may span the viewport while content remains within one of these bands.
+
+## Spacing
+
+Use the canonical scale:
+- 4 / 8 / 12 / 16px — compact relationships
+- 24 / 32px — component padding and local groups
+- 48 / 64px — section groups
+- 96px — major desktop section separation
+
+Do not create one-off spacing values merely to reproduce a legacy page pixel-for-pixel.
+
+## Page rhythm
+
+- centered, readable composition over unnecessarily wide layouts
+- generous whitespace between ideas
+- obvious section boundaries through spacing/background/rule
+- two-column layouts collapse cleanly
+- mobile composition takes precedence over preserving desktop geometry
 
 ---
 
-# 11. Images and portraits
+# 6. Shape, borders, and elevation
 
-The brand is person-led. Prefer authentic photography of Dylan, clients, groups, coaching contexts, professional settings, and relevant lived experience over generic stock illustration.
+Canonical radii:
+- 6px — buttons and compact controls
+- 12px — default cards, forms, rectangular portraits/media
+- 20px — large feature panels
+- 999px — pills only
+- 50% — circular avatars only
+
+Borders are normally 1px and quiet. Orange borders are selective accents, not universal card decoration.
+
+Use elevation sparingly. Prefer:
+1. spacing/background separation
+2. subtle border
+3. restrained shadow
+
+Use the three shadows in `tokens.css`; do not casually invent additional shadow recipes.
+
+---
+
+# 7. Photography and imagery
+
+The brand is person-led. Prefer authentic photography of Dylan, clients, coaching contexts, professional settings, and lived experience over generic stock illustration or staged corporate imagery.
 
 ## Portrait rules
+
 - preserve natural skin tone
-- no heavy color cast or dramatic filters
-- default 12px radius for rectangular portraits
-- testimonial/headshot avatars may be circular
-- crop deliberately around face/eyes; do not rely on arbitrary center cropping
-- use sufficient resolution for the rendered size
+- no heavy color cast or dramatic filter
+- 12px default radius for rectangular portraits
+- 50% circular crop for testimonial/headshot avatars
+- deliberate crop around face/eyes; never arbitrary center-crop
+- use sufficient resolution for rendered size
+
+## Dylan headshot production constraint
+
+The canonical primary headshot source has an approximately 20–22px white keyline artifact along the bottom and right edges. Crop it away before compositing into featured images, cards, or other colored-background assets.
+
+Preferred source hierarchy:
+1. main square hero headshot — primary default
+2. full professional portrait — About/bio contexts
+3. Big Bend / tandem-bike athlete photo — origin story/lifestyle contexts
+4. speaker/office batch — selective use only; do not treat as interchangeable defaults
 
 ## Decorative imagery
-Decorative shapes should support hierarchy, not compete with the person or message. One visual device is usually enough.
+
+Decorative shapes support hierarchy and message; they do not compete with the person or copy. One visual device is usually enough.
 
 ---
 
-# 12. Logo
+# 8. Logo
 
-The currently available `assets/images/brand/dylan-logo-150.svg` may be used as an interim approved asset, but it contains an embedded raster image and is **not** the preferred long-term master.
+`assets/images/brand/dylan-logo-150.svg` is the officially approved canonical logo until a true vector master is created.
+
+The fact that it contains an embedded raster image does not reduce its current authority.
 
 Rules:
 - preserve aspect ratio
-- do not distort, stretch, outline, shadow, or recolor the embedded mark
-- maintain visible clear space around the mark
-- do not recreate the logo from text or substitute a generic monogram
+- maintain visible clear space
+- do not recolor, shadow, outline, filter, stretch, or distort
+- do not recreate it from type
+- do not substitute a generic monogram
+- on dark Navy backgrounds, confirm the embedded raster renders cleanly and provide clear space as needed
 
-A true vector/source-master logo remains an asset-library task for a later milestone.
+A clean vector rebuild remains a future asset task.
 
 ---
 
-# 13. Motion
+# 9. Motion
 
-Motion should communicate state or hierarchy, not create ambient activity.
+Motion communicates state or hierarchy; it does not create ambient activity.
 
-Approved motion:
+Approved:
 - hover/focus state changes
-- modest fades or short vertical reveals
+- short fades or vertical reveals, normally ≤240ms
 - accordion expansion/collapse
-- purposeful carousel or step transitions
+- purposeful carousel transitions
 
-Avoid:
-- perpetual floating decorative objects
-- continuous pulsing unrelated to status
-- tilt/parallax merely for novelty
+Not approved:
+- perpetual floating or pulsing decoration
+- tilt/parallax for novelty
 - long page-entry animation sequences
 
-Honor `prefers-reduced-motion`.
-
-Use the timing/easing tokens in `tokens.css`.
+Always honor `prefers-reduced-motion`; transition durations become 0ms.
 
 ---
 
-# 14. Dark sections
+# 10. Dark sections
 
-Dark sections use **Deep Indigo `#2C2C55`**, not arbitrary near-black.
+Dark sections use **Brand Navy `#27374D`**.
 
-On Deep Indigo:
+On Navy:
 - primary text: White
-- secondary text: light neutral/Soft Blue as appropriate
-- Orange: emphasis/action accent
-- Teal: secondary positive accent
+- Orange: emphasis, CTA, eyebrow, icons
+- Teal: secondary positive emphasis
 
-Do not make the entire default site dark simply because the legacy portfolio was dark. Light-first pages with selective dark bands are the canonical default.
+For Elementor delivery, the exact outer-wrapper implementation rule is defined in `SCHEMES.md` and is mandatory.
 
 ---
 
-# 15. Pattern discipline
+# 11. Copy constraints that affect design
 
-New work should reuse the same visual grammar:
-- Inter typography
-- Navy text/structure
-- Orange primary accent
+These constraints apply to component examples, mockups, placeholder copy, public design assets, and production deliverables.
+
+## Never expose internal avatar labels
+
+Do not publish: SEEKER, STRATEGIST, STEWARD, STRIVER, SURVIVOR, QUITTER.
+
+## Lead with 1:1 access
+
+Sales/design copy leads with 1:1 coaching access. Group calls and community are bonuses, not the primary promise.
+
+## Reading level
+
+Use direct, plain-spoken language at approximately fifth-grade reading level. Avoid jargon and corporate euphemism.
+
+## Banned terms
+
+Do not use:
+- “instinct” / “instincts”
+- “gut-check” / “gut check”
+
+Use alternatives such as training, reflexes, insights, tactics, beliefs, habits, knowledge, learned patterns, developed skills, assessment, check, validation, self-assessment, or weekly review.
+
+## Outcome sequence
+
+When describing career change/agency outcomes, prefer:
+1. autonomy / control
+2. financial outcomes
+3. happiness / fulfillment
+
+Do not lead with money or happiness when autonomy language is available.
+
+---
+
+# 12. Pattern discipline
+
+New work should reuse this grammar:
+- Inter web typography
+- Navy structure
+- Orange primary CTA/accent
 - Teal secondary accent
-- light-first surfaces
-- selective Deep Indigo sections
+- neutral gray body/caption text
+- light-first surfaces with selective Navy dark sections
 - limited width bands
 - limited spacing scale
 - limited radii
 - restrained shadows
 - people-centered imagery
+- direct, plain-spoken copy
 
-When a new visual need appears, first attempt to solve it with the existing tokens and rules. Add a new token only when the need is reusable and meaningfully distinct.
+When a new need appears, first solve it with existing rules and tokens. Add a token only when the need is reusable and meaningfully distinct.
 
 ---
 
-# 16. Relationship to legacy implementation
+# 13. Relationship to implementation schemes
 
-The existing portfolio is migration evidence, not the canonical system.
+`BRAND.md` answers **what must remain consistent**.
 
-When updating legacy pages:
-- preserve content and functionality unless the task says otherwise
-- replace legacy visual values incrementally with `tokens.css`
-- do not copy template residue into new components
-- do not attempt a global redesign merely because canonical tokens now exist
+`SCHEMES.md` answers **how the same brand must be delivered in specific environments**, including:
+- Elementor
+- Gutenberg
+- WordPress posts/pages
+- featured images
+- post packaging and metadata
+- scheduling-link routing
+- future Skool-specific assets
 
-Milestone 4 will define approved reusable components. Until then, this file and `tokens.css` govern visual decisions at the primitive/system level.
+`components.html` answers **what reusable components look and behave like**.
+
+The existing portfolio remains migration evidence, not the canonical system. Preserve content/functionality unless instructed otherwise, migrate deliberately, and never copy template residue into new work.
